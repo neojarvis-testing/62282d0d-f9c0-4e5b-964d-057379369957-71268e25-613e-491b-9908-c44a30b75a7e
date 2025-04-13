@@ -115,12 +115,11 @@ public class HomePageActions {
  
     public void clickFaceBook(){
         String mainWindowHandle = Base.driver.getWindowHandle();
-        Screenshot.screenShotAndHighlight(Base.driver, HomePageLocators.clevelandClinicHeader, "facebook");
-        driverHelper.clickTheElement(HomePageLocators.facebookSocialLink);
-        driverHelper.switchWindow();  
-        // driverHelper.verifyUrl("https://www.facebook.com/ClevelandClinic");  
-        Base.driver.close();
-        Base.driver.switchTo().window(mainWindowHandle);        
+	        driverHelper.clickTheElement(HomePageLocators.facebookSocialLink);
+	        driverHelper.switchWindow();   
+	        driverHelper.assertUrl(ExcelReader.readCellValue("data1", "facebook", "value"));
+	        Base.driver.close();
+	        Base.driver.switchTo().window(mainWindowHandle);         
     }
    
     /**
@@ -131,11 +130,11 @@ public class HomePageActions {
  
     public void clickTwitter(){
         String mainWindowHandle = Base.driver.getWindowHandle();
-        driverHelper.clickTheElement(HomePageLocators.twitterSocialLink);
-        driverHelper.switchWindow();      
-        // driverHelper.verifyUrl("https://twitter.com/clevelandclinic");
-        Base.driver.close();
-        Base.driver.switchTo().window(mainWindowHandle);
+	        driverHelper.clickTheElement(HomePageLocators.twitterSocialLink);
+	        driverHelper.switchWindow();      
+	        driverHelper.assertUrl(ExcelReader.readCellValue("data1", "twitter", "value"));
+	        Base.driver.close();
+	        Base.driver.switchTo().window(mainWindowHandle);
     }
    
     /**
@@ -147,8 +146,8 @@ public class HomePageActions {
     public void clickYoutube(){
         String mainWindowHandle = Base.driver.getWindowHandle();
         driverHelper.clickTheElement(HomePageLocators.youtubeSocialLink);
+        driverHelper.assertHref(HomePageLocators.youtubeSocialLink,ExcelReader.readCellValue("data1", "youtube", "value"));
         driverHelper.switchWindow();      
-        // driverHelper.verifyUrl("https://www.youtube.com/user/clevelandclinic");
         Base.driver.close();
         Base.driver.switchTo().window(mainWindowHandle);
     }
@@ -163,7 +162,7 @@ public class HomePageActions {
         String mainWindowHandle = Base.driver.getWindowHandle();
         driverHelper.clickTheElement(HomePageLocators.instagramSocialLink);
         driverHelper.switchWindow();      
-        // driverHelper.verifyUrl("https://www.instagram.com/clevelandclinic/");  
+        driverHelper.assertUrl(ExcelReader.readCellValue("data1", "instagram", "value"));
         Base.driver.close();
         Base.driver.switchTo().window(mainWindowHandle);
     }
@@ -178,7 +177,7 @@ public class HomePageActions {
         String mainWindowHandle = Base.driver.getWindowHandle();
         driverHelper.clickTheElement(HomePageLocators.linkedinSocialLink);
         driverHelper.switchWindow();        
-        // driverHelper.verifyUrl("https://www.linkedin.com/company/cleveland-clinic");
+        driverHelper.assertUrl(ExcelReader.readCellValue("data1", "linkedIn", "value"));
         Base.driver.close();
         Base.driver.switchTo().window(mainWindowHandle);
     }
@@ -193,7 +192,7 @@ public class HomePageActions {
         String mainWindowHandle = Base.driver.getWindowHandle();
         driverHelper.clickTheElement(HomePageLocators.pinterestSocialLink);
         driverHelper.switchWindow();      
-        // driverHelper.verifyUrl("https://www.pinterest.com/clevelandclinic/");  
+        driverHelper.assertUrl(ExcelReader.readCellValue("data1", "pinterest", "value"));
         Base.driver.close();
         Base.driver.switchTo().window(mainWindowHandle);
     }
@@ -208,7 +207,7 @@ public class HomePageActions {
         String mainWindowHandle = Base.driver.getWindowHandle();
         driverHelper.clickTheElement(HomePageLocators.snapchatSocialLink);
         driverHelper.switchWindow();    
-        // driverHelper.verifyUrl("https://www.snapchat.com/add/clevelandclinic");  
+        driverHelper.assertUrl(ExcelReader.readCellValue("data1", "snapchat", "value"));
         Base.driver.close();
         Base.driver.switchTo().window(mainWindowHandle);
     }
@@ -222,7 +221,7 @@ public class HomePageActions {
     public void clickAppointmentsAccess(){
         driverHelper.scrollToElement(HomePageLocators.appointmentsActions);
         driverHelper.clickTheElement(HomePageLocators.appointmentsActions);
-        // driverHelper.verifyUrl("https://my.clevelandclinic.org/patients/information/access");
+        driverHelper.assertUrl(ExcelReader.readCellValue("data1", "appointments", "value"));
         Base.driver.navigate().back();
     }
    
@@ -235,13 +234,13 @@ public class HomePageActions {
     public void clickAcceptedInsurance(){
         driverHelper.scrollToElement(HomePageLocators.acceptedInsuranceActions);
         driverHelper.clickTheElement(HomePageLocators.acceptedInsuranceActions);
-        // driverHelper.verifyUrl("https://my.clevelandclinic.org/patients/accepted-insurance");
+        driverHelper.assertUrl(ExcelReader.readCellValue("data1", "insurance", "value"));
         Base.driver.navigate().back();
     }
    
     /**
      * Author: Harshit Tomar
-     * This method clicks on the "Accepted Insurance" link on the home page.
+     * This method clicks on the "Events Calender" link on the home page.
      * It scrolls to the element, clicks it, and then navigates back.
      */
  
@@ -251,20 +250,21 @@ public class HomePageActions {
         driverHelper.clickTheElement(HomePageLocators.eventsCalenderActions);
         driverHelper.switchWindow();    
         // driverHelper.verifyUrl("https://events.clevelandclinic.org/");
+        driverHelper.assertUrl(ExcelReader.readCellValue("data1", "calender", "value"));
         Base.driver.close();
         Base.driver.switchTo().window(mainWindowHandle);
     }
    
     /**
      * Author: Harshit Tomar
-     * This method clicks on the "Accepted Insurance" link on the home page.
+     * This method clicks on the "Financial Assistance" link on the home page.
      * It scrolls to the element, clicks it, and then navigates back.
      */
  
     public void clickFinancialAssistance(){
         driverHelper.scrollToElement(HomePageLocators.financialAssistanceActions);
         driverHelper.clickTheElement(HomePageLocators.financialAssistanceActions);
-        // driverHelper.verifyUrl("https://my.clevelandclinic.org/patients/billing-finance/financial-assistance");
+        driverHelper.assertUrl(ExcelReader.readCellValue("data1", "financial", "value"));
         Base.driver.navigate().back();
     }
    
@@ -277,7 +277,7 @@ public class HomePageActions {
     public void clickGiveCleveland(){
         driverHelper.scrollToElement(HomePageLocators.giveClevelandActions);
         driverHelper.clickTheElement(HomePageLocators.giveClevelandActions);
-        // driverHelper.verifyUrl("https://my.clevelandclinic.org/giving");
+        driverHelper.assertUrl(ExcelReader.readCellValue("data1", "giveCleveland", "value"));
         Base.driver.navigate().back();
     }
    
@@ -290,7 +290,7 @@ public class HomePageActions {
     public void clickPayBill(){
         driverHelper.scrollToElement(HomePageLocators.payBillActions);
         driverHelper.clickTheElement(HomePageLocators.payBillActions);
-        // driverHelper.verifyUrl("https://my.clevelandclinic.org/patients/billing-finance/payment-options");
+        driverHelper.assertUrl(ExcelReader.readCellValue("data1", "payBill", "value"));
         Base.driver.navigate().back();
     }
    
@@ -303,75 +303,99 @@ public class HomePageActions {
     public void clickPriceTransparency(){
         driverHelper.scrollToElement(HomePageLocators.priceTransparencyActions);
         driverHelper.clickTheElement(HomePageLocators.priceTransparencyActions);
-        // driverHelper.verifyUrl("https://my.clevelandclinic.org/patients/billing-finance/comprehensive-hospital-charges]");
+        driverHelper.assertUrl(ExcelReader.readCellValue("data1", "transparency", "value"));
         Base.driver.navigate().back();
     }
+
+    /**
+     * Author: Harshit Tomar
+     * This method clicks on the "Refer Patient" link on the home page.
+     * It scrolls to the element, clicks it, and then navigates back.
+     */
     public void clickReferPatient(){
         driverHelper.scrollToElement(HomePageLocators.referPatientActions);
         driverHelper.clickTheElement(HomePageLocators.referPatientActions);
-        // driverHelper.verifyUrl("https://my.clevelandclinic.org/professionals/referring");
+        driverHelper.assertUrl(ExcelReader.readCellValue("data1", "patient", "value"));
         Base.driver.navigate().back();
     }
+
+    /**
+     * Author: Harshit Tomar
+     * This method clicks on the "Phone Directory" link on the home page.
+     * It scrolls to the element, clicks it, and then navigates back.
+     */
     public void clickPhoneDirectory(){
         driverHelper.scrollToElement(HomePageLocators.phoneDirectoryActions);
         driverHelper.clickTheElement(HomePageLocators.phoneDirectoryActions);
-        // driverHelper.verifyUrl("https://my.clevelandclinic.org/about/contact/phone-directory");
+        driverHelper.assertUrl(ExcelReader.readCellValue("data1", "directory", "value"));
         Base.driver.navigate().back();
     }
+
+    /**
+     * Author: Harshit Tomar
+     * This method clicks on the "Virtual Opinions" link on the home page.
+     * It scrolls to the element, clicks it, and then navigates back.
+     */
     public void clickVirtualOpinions(){
         driverHelper.scrollToElement(HomePageLocators.virtualOpinionsActions);
         driverHelper.clickTheElement(HomePageLocators.virtualOpinionsActions);
-        // driverHelper.verifyUrl("https://my.clevelandclinic.org/online-services/virtual-second-opinions");
+        driverHelper.assertUrl(ExcelReader.readCellValue("data1", "vitualOpinions", "value"));
         Base.driver.navigate().back();
     }
+
+    /**
+     * Author: Harshit Tomar
+     * This method clicks on the "Virtual Visits" link on the home page.
+     * It scrolls to the element, clicks it, and then navigates back.
+     */
     public void clickVirtualVisits(){
         driverHelper.scrollToElement(HomePageLocators.virtualVisitsActions);
         driverHelper.clickTheElement(HomePageLocators.virtualVisitsActions);
-        // driverHelper.verifyUrl("https://my.clevelandclinic.org/online-services/virtual-visits");
+        driverHelper.assertUrl(ExcelReader.readCellValue("data1", "virtualVisits", "value"));
         Base.driver.navigate().back();
         driverHelper.clickTheElement(HomePageLocators.clevelandClinicHeader);
     }
+
  
     public void verifySocialLinks(ExtentTest test){
         clickFaceBook();
-        test.log(Status.INFO, "clicked and verified facebook");
-        ReportHelper.attachScreenshotToReport("fcbook", test, "fcbook scrnsht");
+
         clickInstagram();
-        test.log(Status.INFO, "clicked and verified instagram");
+    
         clickLinkedIn();
-        test.log(Status.INFO, "clicked and verified linkedIn");
+
         clickPinterest();
-        test.log(Status.INFO, "clicked and verified pinterest");
+     
         clickTwitter();
-        test.log(Status.INFO, "clicked and verified twitter");
+      
         clickYoutube();
-        test.log(Status.INFO, "clicked and verified youtube");
+
         clickSnapchat();
-        test.log(Status.INFO, "clicked and verified snapchat");
+
     }
     public void verifyActionsFooter(ExtentTest test){
         clickAppointmentsAccess();
-        test.log(Status.INFO, "Appointments & access verified");
+
         clickAcceptedInsurance();
-        test.log(Status.INFO, "Accepted Insurance verified");
+       
         clickEventsCalender();
-        test.log(Status.INFO, "Events Calender verified");
+       
         clickFinancialAssistance();
-        test.log(Status.INFO, "Financial Assistance verified");
+        
         clickGiveCleveland();
-        test.log(Status.INFO, "Give to cleveland clinic verified");
+       
         clickPayBill();
-        test.log(Status.INFO, "Pay biils online verified");
+       
         clickPriceTransparency();
-        test.log(Status.INFO, "Price Transparency verified");
+        
         clickReferPatient();
-        test.log(Status.INFO, "Refer Patients verified");
+      
         clickPhoneDirectory();
-        test.log(Status.INFO, "Phone Directory verified");
+      
         clickVirtualOpinions();
-        test.log(Status.INFO, "Virtual Opinions verified");
+        
         clickVirtualVisits();
-        test.log(Status.INFO, "Virtual Visits verified");
+      
     }
     
    
