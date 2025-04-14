@@ -19,7 +19,7 @@ import com.google.common.io.Files;
 public class ReportHelper extends Base {
     public static TakesScreenshot ts;
     private static ExtentReports report;
-    public static ExtentTest test;
+    private static ExtentTest test;
  
     /**
      * Author : Vinny

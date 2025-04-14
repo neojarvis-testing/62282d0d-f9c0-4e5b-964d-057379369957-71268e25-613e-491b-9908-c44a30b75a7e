@@ -15,6 +15,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.aventstack.extentreports.Status;
+
+import stepdefinitions.Hooks;
  
 /**
  * Utility class to provide helper methods for WebDriver actions.
@@ -342,11 +344,11 @@ public void assertText(By locator, String expectedText) {
         String actualText = element.getText();
         Assert.assertTrue(actualText.contains(expectedText));
         LoggerHandler.info(expectedText + " Asserted");
-        ReportHelper.test.log(Status.PASS, "Found " + expectedText + " as expected");
+        Hooks.test.log(Status.PASS, "Found " + expectedText + " as expected");
     } catch (Exception e) {
         e.printStackTrace();
         LoggerHandler.error(e.getMessage());
-        ReportHelper.test.log(Status.PASS, "Found " + expectedText + " not as expected");
+        Hooks.test.log(Status.PASS, "Found " + expectedText + " not as expected");
     }
 }
 
@@ -358,16 +360,16 @@ public void assertText(By locator, String expectedText) {
  */
 public void assertUrl(String expectedText) {
     try {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(4));
         wait.until(ExpectedConditions.urlContains(expectedText));
         String actualUrl = driver.getCurrentUrl();
         Assert.assertTrue(actualUrl.contains(expectedText));
         LoggerHandler.info(expectedText + " Asserted");
-        ReportHelper.test.log(Status.PASS, "Verified URL: " + expectedText + " as expected");
+        Hooks.test.log(Status.PASS, "Verified URL: " + expectedText + " as expected");
     } catch (Exception e) {
         e.printStackTrace();
         LoggerHandler.error(e.getMessage());
-        ReportHelper.test.log(Status.FAIL, "Verified URL: " + expectedText + " not as expected");
+        Hooks.test.log(Status.FAIL, "Verified URL: " + expectedText + " not as expected");
     }
 }
 /**
@@ -383,11 +385,11 @@ public void assertHref(By locator, String expectedText) {
         String actualHref = element.getAttribute("href");
         Assert.assertEquals(actualHref, expectedText);
         LoggerHandler.info(expectedText + " Asserted");
-        ReportHelper.test.log(Status.PASS, "Found " + expectedText + " as expected");
+        Hooks.test.log(Status.PASS, "Found " + expectedText + " as expected");
     } catch (Exception e) {
         e.printStackTrace();
         LoggerHandler.error(e.getMessage());
-        ReportHelper.test.log(Status.PASS, "Found " + expectedText + " not as expected");
+        Hooks.test.log(Status.PASS, "Found " + expectedText + " not as expected");
     }
 }
 

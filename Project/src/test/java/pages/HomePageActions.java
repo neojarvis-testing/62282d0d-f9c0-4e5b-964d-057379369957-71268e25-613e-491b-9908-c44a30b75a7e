@@ -249,7 +249,6 @@ public class HomePageActions {
         driverHelper.scrollToElement(HomePageLocators.eventsCalenderActions);
         driverHelper.clickTheElement(HomePageLocators.eventsCalenderActions);
         driverHelper.switchWindow();    
-        // driverHelper.verifyUrl("https://events.clevelandclinic.org/");
         driverHelper.assertUrl(ExcelReader.readCellValue("data1", "calender", "value"));
         Base.driver.close();
         Base.driver.switchTo().window(mainWindowHandle);

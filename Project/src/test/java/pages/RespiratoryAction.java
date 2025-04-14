@@ -31,7 +31,6 @@ public void doctorFilters()
     Base.driver.navigate().back();
    
     help.hoverAndClick(RespiratoryLocators.byDoctors);
-    //test.log(Status.PASS, "Clicked on Doctors");
     
     help.hoverAndClick(RespiratoryLocators.specialist);
   

@@ -1,7 +1,7 @@
 package stepdefinitions;
 
 import com.aventstack.extentreports.ExtentReports;
-
+import com.aventstack.extentreports.ExtentTest;
 import io.cucumber.java.After;
 import io.cucumber.java.AfterAll;
 import io.cucumber.java.Before;
@@ -11,7 +11,7 @@ import utils.Base;
 import utils.ReportHelper;
 
 public class Hooks extends Base {
-
+    public static ExtentTest test;
     public static ExtentReports reports;
 
     @BeforeAll
@@ -24,7 +24,7 @@ public class Hooks extends Base {
     @Before
     public void browserInitialization(Scenario sc) {
         openBrowser();
-        ReportHelper.ExtentTest(sc.getName());
+        test=reports.createTest(sc.getName());
 
     }
 
@@ -36,7 +36,7 @@ public class Hooks extends Base {
 
     @AfterAll
     public static void closeReportResources() {
-        ReportHelper.extentReportFlush();
+        reports.flush();
 
     }
 
