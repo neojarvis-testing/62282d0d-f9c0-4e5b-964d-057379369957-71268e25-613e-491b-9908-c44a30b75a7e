@@ -1,0 +1,22 @@
+2025-04-13 17:22:55,876 INFO  utils.LoggerHandler - Hovered Over the Element with locator By.cssSelector: div a.story-panel__button[href='/locations']
+2025-04-13 17:22:56,074 INFO  utils.LoggerHandler - Clicked the Element with locator By.cssSelector: div a.story-panel__button[href='/locations']
+2025-04-13 17:22:57,237 INFO  utils.LoggerHandler - Clicked the Element with locator By.id: search-input
+2025-04-13 17:22:57,292 INFO  utils.LoggerHandler - Inputed Ohio in Input Field
+2025-04-13 17:22:57,536 INFO  utils.LoggerHandler - Clicked the Element with locator By.cssSelector: input[class='chosen-search-input default']
+2025-04-13 17:22:57,610 INFO  utils.LoggerHandler - Wait till the Element By.cssSelector: input[class='chosen-search-input default'] is Visible
+2025-04-13 17:22:57,943 INFO  utils.LoggerHandler - Clicked the Element with locator By.xpath: //li[contains(text(),'Health Centers')]
+2025-04-13 17:23:01,392 INFO  utils.LoggerHandler - Clicked the Element with locator By.cssSelector: input[class='chosen-search-input default']
+2025-04-13 17:23:01,423 INFO  utils.LoggerHandler - Wait till the Element By.cssSelector: input[class='chosen-search-input default'] is Visible
+2025-04-13 17:23:01,572 INFO  utils.LoggerHandler - Clicked the Element with locator By.xpath: //li[contains(text(),'Asthma')]
+2025-04-13 17:23:01,675 INFO  utils.LoggerHandler - Wait till the Element By.xpath: (//input[@class='chosen-search-input'])[2] is Visible
+2025-04-13 17:23:01,913 INFO  utils.LoggerHandler - Clicked the Element with locator By.xpath: (//input[@class='chosen-search-input'])[2]
+2025-04-13 17:23:02,154 INFO  utils.LoggerHandler - Clicked the Element with locator By.xpath: //li[contains(text(),'Brain Health')]
+2025-04-13 17:23:02,454 INFO  utils.LoggerHandler - Clicked the Element with locator By.cssSelector: input[class='chosen-search-input default']
+2025-04-13 17:23:02,508 INFO  utils.LoggerHandler - Wait till the Element By.cssSelector: input[class='chosen-search-input default'] is Visible
+2025-04-13 17:23:02,750 INFO  utils.LoggerHandler - Clicked the Element with locator By.xpath: //li[contains(text(),'Emergency Services')]
+2025-04-13 17:23:02,856 INFO  utils.LoggerHandler - Wait till the Element By.xpath: (//input[@class='chosen-search-input'])[3] is Visible
+2025-04-13 17:23:03,141 INFO  utils.LoggerHandler - Clicked the Element with locator By.xpath: (//input[@class='chosen-search-input'])[3]
+2025-04-13 17:23:03,283 INFO  utils.LoggerHandler - Clicked the Element with locator By.xpath: //li[contains(text(),'Express Care')]
+2025-04-13 17:23:03,525 INFO  utils.LoggerHandler - Clicked the Element with locator By.xpath: (//a[@target='_blank'])[6]
+2025-04-13 17:23:03,636 INFO  utils.LoggerHandler - Driver Switched to new Window
+2025-04-13 17:23:06,650 INFO  utils.LoggerHandler - Wait till the Element By.cssSelector: [class='gb_Ua gb_zd gb_qd gb_hd'] is Visible
