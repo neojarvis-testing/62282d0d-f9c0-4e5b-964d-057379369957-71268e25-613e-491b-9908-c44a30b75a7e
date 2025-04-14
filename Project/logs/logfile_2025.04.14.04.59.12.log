@@ -1,0 +1,47 @@
+2025-04-14 04:59:12,133 INFO  utils.LoggerHandler - Verified The Url
+2025-04-14 04:59:12,530 INFO  utils.LoggerHandler - Clicked the Element with locator By.xpath: (//a[@class='story-panel__button button'])[3]
+2025-04-14 04:59:13,427 INFO  utils.LoggerHandler - Wait till the Element By.cssSelector: [class='button'] is Clickable
+2025-04-14 04:59:13,739 INFO  utils.LoggerHandler - Clicked the Element with locator By.cssSelector: [class='button']
+2025-04-14 04:59:16,940 INFO  utils.LoggerHandler - Hovered Over the Element with locator By.cssSelector: .btn--primary
+2025-04-14 04:59:17,148 INFO  utils.LoggerHandler - Clicked the Element with locator By.cssSelector: .btn--primary
+2025-04-14 04:59:17,240 INFO  utils.LoggerHandler - Wait till the Element By.xpath: //button[@class='btn--icon btn--myself '] is Clickable
+2025-04-14 04:59:19,458 INFO  utils.LoggerHandler - Hovered Over the Element And Clicked the element with locator By.xpath: //button[@class='btn--icon btn--myself ']
+2025-04-14 04:59:19,766 INFO  utils.LoggerHandler - Clicked the Element with locator By.cssSelector: .btn--icon.btn--not-sure
+2025-04-14 04:59:19,946 INFO  utils.LoggerHandler - Inputed Rajesh in Input Field
+2025-04-14 04:59:20,074 INFO  utils.LoggerHandler - Inputed Kumar in Input Field
+2025-04-14 04:59:20,366 INFO  utils.LoggerHandler - Selected The Option from The DropDown with Value: Male
+2025-04-14 04:59:20,617 INFO  utils.LoggerHandler - Selected The Option from The DropDown with Value: Single
+2025-04-14 04:59:20,746 INFO  utils.LoggerHandler - Inputed 09/07/1997 in Input Field
+2025-04-14 04:59:20,796 INFO  utils.LoggerHandler - Wait till the Element By.cssSelector: .btn--primary is Clickable
+2025-04-14 04:59:22,974 INFO  utils.LoggerHandler - Hovered Over the Element And Clicked the element with locator By.cssSelector: .btn--primary
+2025-04-14 04:59:23,036 INFO  utils.LoggerHandler - Scrolled to the Element And Clicked 
+2025-04-14 04:59:23,263 INFO  utils.LoggerHandler - Inputed 22 Merry Street in Input Field
+2025-04-14 04:59:23,435 INFO  utils.LoggerHandler - Inputed COIMBATORE in Input Field
+2025-04-14 04:59:23,489 INFO  utils.LoggerHandler - Wait till the Element By.id: state is Clickable
+2025-04-14 04:59:23,766 INFO  utils.LoggerHandler - Selected The Option from The DropDown with Visible Text OH
+2025-04-14 04:59:23,925 INFO  utils.LoggerHandler - Inputed mjd000@gmail.com in Input Field
+2025-04-14 04:59:24,049 INFO  utils.LoggerHandler - Inputed 43210 in Input Field
+2025-04-14 04:59:24,171 INFO  utils.LoggerHandler - Inputed 614.466.2000 in Input Field
+2025-04-14 04:59:26,394 INFO  utils.LoggerHandler - Hovered Over the Element And Clicked the element with locator By.cssSelector: .btn--primary
+2025-04-14 04:59:26,626 INFO  utils.LoggerHandler - Inputed Fever in Input Field
+2025-04-14 04:59:28,885 INFO  utils.LoggerHandler - Hovered Over the Element And Clicked the element with locator By.cssSelector: .btn--primary
+2025-04-14 04:59:28,936 INFO  utils.LoggerHandler - Wait till the Element By.cssSelector: .web-appt__header is Visible
+2025-04-14 04:59:31,200 INFO  utils.LoggerHandler - Wait till the Element By.cssSelector: .btn--primary is Clickable
+2025-04-14 04:59:33,404 INFO  utils.LoggerHandler - Hovered Over the Element And Clicked the element with locator By.cssSelector: .btn--primary
+2025-04-14 04:59:37,193 INFO  utils.LoggerHandler - Verified The Url
+2025-04-14 04:59:37,641 INFO  utils.LoggerHandler - Clicked the Element with locator By.xpath: (//a[@class='story-panel__button button'])[1]
+2025-04-14 04:59:39,040 INFO  utils.LoggerHandler - Inputed Heart in Input Field
+2025-04-14 04:59:39,097 INFO  utils.LoggerHandler - Wait till the Element By.cssSelector: [value='Filter by Locations by City...'] is Clickable
+2025-04-14 04:59:39,357 INFO  utils.LoggerHandler - Clicked the Element with locator By.cssSelector: [value='Filter by Locations by City...']
+2025-04-14 04:59:39,852 INFO  utils.LoggerHandler - Clicked the Element with locator By.xpath: //li[text()='East Cleveland, OH']
+2025-04-14 04:59:40,307 INFO  utils.LoggerHandler - Wait till the Element By.cssSelector: [value='Filter by Institutes & Departments...'] is Clickable
+2025-04-14 04:59:40,541 INFO  utils.LoggerHandler - Clicked the Element with locator By.cssSelector: [value='Filter by Institutes & Departments...']
+2025-04-14 04:59:40,660 INFO  utils.LoggerHandler - Wait till the Element By.xpath: //li[text()='Cardiovascular Medicine'] is Clickable
+2025-04-14 04:59:41,064 INFO  utils.LoggerHandler - Clicked the Element with locator By.xpath: //li[text()='Cardiovascular Medicine']
+2025-04-14 04:59:41,137 INFO  utils.LoggerHandler - Wait till the Element By.cssSelector: [value='Filter by Languages...'] is Clickable
+2025-04-14 04:59:41,334 INFO  utils.LoggerHandler - Clicked the Element with locator By.cssSelector: [value='Filter by Languages...']
+2025-04-14 04:59:41,425 INFO  utils.LoggerHandler - Inputed English in Input Field
+2025-04-14 04:59:41,499 INFO  utils.LoggerHandler - Enter Action Performed
+2025-04-14 04:59:42,130 INFO  utils.LoggerHandler - Wait till the Element By.xpath: //a[@href='/webappointment?PhysicianFirstName=Michael&PhysicianLastName=Maier&PhysicianSuffix=DPM'] is Clickable
+2025-04-14 04:59:42,340 INFO  utils.LoggerHandler - Clicked the Element with locator By.xpath: //a[@href='/webappointment?PhysicianFirstName=Michael&PhysicianLastName=Maier&PhysicianSuffix=DPM']
+2025-04-14 04:59:42,434 INFO  utils.LoggerHandler - Driver Switched to new Window
