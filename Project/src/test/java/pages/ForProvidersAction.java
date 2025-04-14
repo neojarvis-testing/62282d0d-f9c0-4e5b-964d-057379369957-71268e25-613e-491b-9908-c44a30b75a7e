@@ -1,17 +1,17 @@
 package pages;
-
+ 
 import java.time.Duration;
-
+ 
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-
+ 
 import uistore.HomePageLocators;
 import utils.Base;
 //import utils.ExcelReader;
 import utils.WebDriverHelper;
-
+ 
 public class ForProvidersAction {
-
+ 
      WebDriverHelper driverHelper = new WebDriverHelper(Base.driver);
  
     /**
@@ -36,7 +36,7 @@ public class ForProvidersAction {
             Base.driver.switchTo().window(mainWindowHandle);
            
         } catch (Exception e) {
-            // Handle exception
+           
         }
     }
  
@@ -62,7 +62,7 @@ public class ForProvidersAction {
             Base.driver.switchTo().window(mainWindowHandle);
            
         } catch (Exception e) {
-            // Handle exception
+            
         }
     }
  
@@ -81,7 +81,7 @@ public class ForProvidersAction {
             test.log(Status.PASS,"Clicked on Referring Physician as excepted");
             driverHelper.switchWindow();
             test.log(Status.PASS,"Switched to new Referring Physician page as excepted");
-            //driverHelper.verifyTitle(ExcelReader.readCellValue("Sheet1", "7", "value"));
+            //driverHelper.verifyTitle(ExcelReader.readCellValue("data2", "7", "value"));
             Base.driver.close();
             Base.driver.switchTo().window(mainWindowHandle);
            
@@ -106,7 +106,7 @@ public class ForProvidersAction {
             test.log(Status.PASS,"Clicked on Join our Site for Physician as excepted");
             driverHelper.switchWindow();
             test.log(Status.PASS,"Switched to new Site for Physician page as excepted");
-            //driverHelper.verifyTitle(ExcelReader.readCellValue("Sheet1", "8", "value"));
+            //driverHelper.verifyTitle(ExcelReader.readCellValue("data2", "8", "value"));
             Base.driver.close();
             Base.driver.switchTo().window(mainWindowHandle);
            
@@ -132,7 +132,7 @@ public class ForProvidersAction {
             Base.driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(2));
             driverHelper.switchWindow();
             test.log(Status.PASS,"Switched to new Training and Education page as excepted");
-            //driverHelper.verifyTitle(ExcelReader.readCellValue("Sheet1", "9", "value"));
+            //driverHelper.verifyTitle(ExcelReader.readCellValue("data2", "9", "value"));
             Base.driver.close();
             Base.driver.switchTo().window(mainWindowHandle);
            
@@ -142,5 +142,5 @@ public class ForProvidersAction {
         }
     }
  
-
+ 
 }
