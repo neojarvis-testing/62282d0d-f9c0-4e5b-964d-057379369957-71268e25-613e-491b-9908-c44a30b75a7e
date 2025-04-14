@@ -52,12 +52,12 @@ public class FindADoctorActions
         driverHelper.waitForVisibility(FindADoctorLocators.FindADoctorLocators_Department,10);
         driverHelper.waitForClickability(FindADoctorLocators.FindADoctorLocators_Department,10);    
         driverHelper.hover(FindADoctorLocators.FindADoctorLocators_Department);
-        driverHelper.clickUsingJS(FindADoctorLocators.FindADoctorLocators_Department);
+        driverHelper.clickTheElement(FindADoctorLocators.FindADoctorLocators_Department);
         Hooks.test.log(Status.PASS, "Clicked on Department as Excepted");
         driverHelper.waitForVisibility(FindADoctorLocators.FindADoctorLocators_DepartmentOption, 10);
         driverHelper.waitForClickability(FindADoctorLocators.FindADoctorLocators_DepartmentOption, 10);
         driverHelper.hover(FindADoctorLocators.FindADoctorLocators_DepartmentOption);
-        driverHelper.clickUsingJS(FindADoctorLocators.FindADoctorLocators_DepartmentOption);
+        driverHelper.clickTheElement(FindADoctorLocators.FindADoctorLocators_DepartmentOption);
         Hooks.test.log(Status.PASS, "Clicked on Cardiovascular Medicine as Excepted");
         driverHelper.waitForClickability(FindADoctorLocators.FindADoctorLocators_Language,10);
         driverHelper.clickTheElement(FindADoctorLocators.FindADoctorLocators_Language);

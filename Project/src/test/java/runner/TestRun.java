@@ -6,7 +6,7 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
  
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "./features", glue="stepdefinition")
+@CucumberOptions(features = "./features", glue="stepdefinition",tags = "@doctor")
 public class TestRun {
    
 }
