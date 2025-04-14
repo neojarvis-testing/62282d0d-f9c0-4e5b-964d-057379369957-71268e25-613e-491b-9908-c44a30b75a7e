@@ -60,7 +60,6 @@ public class Base {
         try {
             loadProperties();
         } catch (IOException e) {
-
             e.printStackTrace();
         }
         String executionType = prop.getProperty("executiontype");
