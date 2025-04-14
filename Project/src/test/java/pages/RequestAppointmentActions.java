@@ -1,6 +1,9 @@
 package pages;
  
  
+import com.aventstack.extentreports.Status;
+
+import stepdefinition.Hooks;
 import uistore.RequestAppointmentLocators;
 import utils.Base;
 import utils.ReportHelper;
@@ -18,8 +21,15 @@ public class RequestAppointmentActions
 
     public void clickOnGetStarted()
     {
+        try{
         driverHelper.hover(RequestAppointmentLocators.RequestAppointment_Get_Started);
-        driverHelper.clickTheElement(RequestAppointmentLocators.RequestAppointment_Get_Started);       
+        driverHelper.clickTheElement(RequestAppointmentLocators.RequestAppointment_Get_Started);    
+        Hooks.test.log(Status.PASS, "Clicked on Get Started as Excepted");     
+        }catch(Exception e)
+        {
+            Hooks.test.log(Status.FAIL, e.getMessage());
+            ReportHelper.attachScreenshotToReport("Get Started", Hooks.test, "Get Started failed");
+        }
     }
     
     /**
@@ -29,8 +39,15 @@ public class RequestAppointmentActions
 
     public void clickOnNextButton()
     {
+        try{
         driverHelper.waitForClickability(RequestAppointmentLocators.RequestAppointment_NextButton, 10);
         driverHelper.hoverAndClick(RequestAppointmentLocators.RequestAppointment_NextButton);
+        Hooks.test.log(Status.PASS, "Clicked on Next Button as Excepted"); 
+        }catch(Exception e)
+        {
+            Hooks.test.log(Status.FAIL, e.getMessage());
+            ReportHelper.attachScreenshotToReport("Next Button", Hooks.test, "Next Button click failed");
+        }
     }
     
     /**
@@ -40,8 +57,15 @@ public class RequestAppointmentActions
 
     public void clickOnMe()
     {
+        try{
         driverHelper.waitForClickability(RequestAppointmentLocators.RequestAppointment_Me, 10);
         driverHelper.hoverAndClick(RequestAppointmentLocators.RequestAppointment_Me);
+        Hooks.test.log(Status.PASS, "Clicked on Me button as Excepted"); 
+        }catch(Exception e)
+        {
+            Hooks.test.log(Status.FAIL, e.getMessage());
+            ReportHelper.attachScreenshotToReport("Me button", Hooks.test, "ME Button click failed");
+        }
     }
     
     /**
@@ -51,7 +75,14 @@ public class RequestAppointmentActions
 
     public void clickOnNot_Sure()
     {
+        try{
         driverHelper.clickTheElement(RequestAppointmentLocators.RequestAppointment_Not_Sure);
+        Hooks.test.log(Status.PASS, "Clicked on Not Sure as Excepted"); 
+        }catch(Exception e)
+        {
+            Hooks.test.log(Status.FAIL, e.getMessage());
+            ReportHelper.attachScreenshotToReport("Not Sure button", Hooks.test, "Not Sure  Button click failed");
+        }
     }
     
     /**
@@ -67,11 +98,22 @@ public class RequestAppointmentActions
 
     public void fillTheDetails(String firstName,String lastName,String gender,String status,String DOB)
     {
+        try{
         driverHelper.typeText(RequestAppointmentLocators.RequestAppointment_Firstname, firstName);
+        Hooks.test.log(Status.PASS, "Inputed first Name in the Input box as Expected"); 
         driverHelper.typeText(RequestAppointmentLocators.RequestAppointment_Lastname, lastName);
+        Hooks.test.log(Status.PASS, "Inputed Last Name in the Input box as Expected"); 
         driverHelper.selectByValue(RequestAppointmentLocators.RequestAppointment_Gender, gender);
+        Hooks.test.log(Status.PASS, "Selected the Gender in DropDown as Expected"); 
         driverHelper.selectByValue(RequestAppointmentLocators.RequestAppointment_MaritalStatus, status);
+        Hooks.test.log(Status.PASS, "Selected the Marital Status in DropDown as Expected"); 
         driverHelper.typeText(RequestAppointmentLocators.RequestAppointment_DOB, DOB);
+        Hooks.test.log(Status.PASS, "Selected the Date of Birth in DropDown as Expected"); 
+        }catch(Exception e)
+        {
+            Hooks.test.log(Status.FAIL, e.getMessage());
+            ReportHelper.attachScreenshotToReport("Fill Details", Hooks.test, "Fill Details failed");
+        }
     }
     
     /**
@@ -88,15 +130,29 @@ public class RequestAppointmentActions
 
     public void fillcontacts(String address,String city,String state,String zipcode,String email,String phone)
     {
+        try{
         driverHelper.clickUsingJS(RequestAppointmentLocators.RequestAppointment_Address);
+        Hooks.test.log(Status.PASS, "Clicked on Address Input Box as Excepted"); 
         driverHelper.typeText(RequestAppointmentLocators.RequestAppointment_Address, address);
+        Hooks.test.log(Status.PASS, "Inputed Address in the Input box as Expected"); 
         driverHelper.typeText(RequestAppointmentLocators.RequestAppointment_City, city);
+        Hooks.test.log(Status.PASS, "Inputed City in the Input box as Expected"); 
         driverHelper.waitForClickability(RequestAppointmentLocators.RequestAppointment_StateCategory, 10);
         driverHelper.selectByVisibleText(RequestAppointmentLocators.RequestAppointment_StateCategory, state);
+        Hooks.test.log(Status.PASS, "Selected the State in DropDown as Expected"); 
         driverHelper.typeText(RequestAppointmentLocators.RequestAppointment_Email, email);
+        Hooks.test.log(Status.PASS, "Inputed Email in the Input box as Expected"); 
         driverHelper.typeText(RequestAppointmentLocators.RequestAppointment_Zipcode, zipcode);
+        Hooks.test.log(Status.PASS, "Inputed zipcode in the Input box as Expected"); 
         driverHelper.typeText(RequestAppointmentLocators.RequestAppointment_Phone_number, phone);
+        Hooks.test.log(Status.PASS, "Inputed Phone number in the Input box as Expected"); 
         driverHelper.hoverAndClick(RequestAppointmentLocators.RequestAppointment_NextButton);
+        Hooks.test.log(Status.PASS, "Clicked on Next Button as Excepted");
+        }catch(Exception e)
+        {
+            Hooks.test.log(Status.FAIL, e.getMessage());
+            ReportHelper.attachScreenshotToReport("Fill Contacts", Hooks.test, "Fill Contacts failed");
+        }
     }
     
     /**
@@ -108,10 +164,19 @@ public class RequestAppointmentActions
 
     public void appointmentneed(String reason)
     {
+        try{
         driverHelper.typeText(RequestAppointmentLocators.RequestAppointment_Reason, reason);
+        Hooks.test.log(Status.PASS, "Inputed Reason for Appointment in the Input box as Expected"); 
+        driverHelper.waitForClickability(RequestAppointmentLocators.RequestAppointment_NextButton,10);
         driverHelper.hoverAndClick(RequestAppointmentLocators.RequestAppointment_NextButton);
+        Hooks.test.log(Status.PASS, "Clicked on Next Button as Excepted");
         driverHelper.waitForVisibility(RequestAppointmentLocators.RequestAppointment_Verification_Label, 10);
-        Screenshot.screenShotAndHighlight(Base.driver,RequestAppointmentLocators.RequestAppointment_Verification_Label,"Find a doctor");
+        Screenshot.screenShotAndHighlight(Base.driver,RequestAppointmentLocators.RequestAppointment_Verification_Label,"Appointment");
+        ReportHelper.attachScreenshotToReport("Appointment", Hooks.test, "Appointment Found");
+        } catch(Exception e)
+        {
+            ReportHelper.attachScreenshotToReport("Fill Reason for appointment", Hooks.test, e.getMessage());
+        }
     }
 }
  

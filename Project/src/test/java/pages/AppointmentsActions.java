@@ -2,7 +2,8 @@ package pages;
  
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
- 
+
+import stepdefinition.Hooks;
 import uistore.AppointmentsLocators;
 import utils.Base;
 import utils.ReportHelper;
@@ -24,13 +25,13 @@ public class AppointmentsActions
     {
         try{
         driverHelper.waitForClickability(AppointmentsLocators.Appointments_Request,10);
-        // driverHelper.verifyUrl("https://my.clevelandclinic.org/patients/information/access");
+        driverHelper.verifyUrl("https://my.clevelandclinic.org/patients/information/access");
         driverHelper.clickTheElement(AppointmentsLocators.Appointments_Request);
-        // test.log(Status.PASS, "Clicked on schedule now");
+        Hooks.test.log(Status.PASS, "Clicked on schedule now as Expected");
         }catch(Exception e)
         {
-            // test.log(Status.FAIL, e.getMessage());
-            // ReportHelper.attachScreenshotToReport("Appointments_Request", test, "Appointments_Request failed");
+            Hooks.test.log(Status.FAIL, e.getMessage());
+            ReportHelper.attachScreenshotToReport("Appointments_Request", Hooks.test, "Appointments_Request failed");
         }
     }
 }

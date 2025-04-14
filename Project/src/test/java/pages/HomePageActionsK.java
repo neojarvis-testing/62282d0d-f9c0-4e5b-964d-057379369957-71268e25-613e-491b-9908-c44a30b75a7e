@@ -3,8 +3,10 @@ package pages;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
+import stepdefinition.Hooks;
 import uistore.HomePageLocators;
 import utils.Base;
+import utils.ReportHelper;
 import utils.WebDriverHelper;
 
 public class HomePageActionsK {
@@ -18,11 +20,18 @@ public class HomePageActionsK {
      * @param test The ExtentTest object used for logging test PASSrmation.
      */
  
-     public  void clickOnSchedule()
-     {
-         driverHelper.clickTheElement(HomePageLocators.Appointments_ScheduleNow);
-        //  test.log(Status.PASS, "Clicked on schedule now as Excepted");
-     }
+    public  void clickOnSchedule()
+    {
+        try{    
+            driverHelper.clickTheElement(HomePageLocators.Appointments_ScheduleNow);
+            Hooks.test.log(Status.PASS, "Clicked on schedule now as Excepted");
+        }catch(Exception e)
+        {
+        Hooks.test.log(Status.FAIL, e.getMessage());
+        ReportHelper.attachScreenshotToReport("Schedule Now Button", Hooks.test, "Schedule Now Button click failed");
+    }
+    }
+     
   
     
      /**
@@ -35,13 +44,13 @@ public class HomePageActionsK {
   
      public  void clickOnFindADoctor()
      {
-         try{
-         driverHelper.clickTheElement(HomePageLocators.Appointments_Find_a_Doctor);
-        //  test.log(Status.PASS, "Clicked on Find a Doctor as Excepted");
+        try{
+            driverHelper.clickTheElement(HomePageLocators.Appointments_Find_a_Doctor);
+            Hooks.test.log(Status.PASS, "Clicked on Find a Doctor as Excepted");
          }catch(Exception e)
          {
-            //  test.log(Status.FAIL, e.getMessage());
-            //  ReportHelper.attachScreenshotToReport("Appointments_Request", test, "Appointments_Request failed");
+            Hooks.test.log(Status.FAIL, e.getMessage());
+            ReportHelper.attachScreenshotToReport("Appointments_Request", Hooks.test, "Appointments_Request failed");
         }
     }
 
