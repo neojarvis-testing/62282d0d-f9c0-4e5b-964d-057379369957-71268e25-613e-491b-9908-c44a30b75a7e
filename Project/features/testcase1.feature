@@ -1,5 +1,5 @@
 Feature: Search and Verification of Respiratory Information on Cleveland Clinic
-@Respiratory
+
  
  Scenario: TestCase 1 - Respiratory operation
   Given the keyword "Respiratory" is searched
