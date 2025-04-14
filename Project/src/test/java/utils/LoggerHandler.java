@@ -7,6 +7,15 @@ import org.apache.log4j.FileAppender;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PatternLayout;
  
+<<<<<<< HEAD
+=======
+/**
+ * Author: Vignesh
+ * LoggerHandler is a utility class for logging informational and error messages.
+ * It also provides methods to log messages along with attribute text retrieved
+ * from a web element in Selenium WebDriver.
+ */
+>>>>>>> 941cef31d563fddeec24c18082170405827c723d
 public class LoggerHandler {
  
     private static final Logger logger = Logger.getLogger(LoggerHandler.class);
@@ -15,6 +24,10 @@ public class LoggerHandler {
         setupLoggers();
     }
  
+<<<<<<< HEAD
+=======
+   
+>>>>>>> 941cef31d563fddeec24c18082170405827c723d
     private static void setupLoggers() {
         try {
             String timestamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
@@ -29,7 +42,11 @@ public class LoggerHandler {
         }
     }
  
+<<<<<<< HEAD
 
+=======
+   
+>>>>>>> 941cef31d563fddeec24c18082170405827c723d
     private static FileAppender createFileAppender(String fileName, PatternLayout layout) throws Exception {
         return new FileAppender(layout, fileName, true);
     }

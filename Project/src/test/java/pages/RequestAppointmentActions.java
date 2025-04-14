@@ -2,7 +2,11 @@ package pages;
  
  
 import com.aventstack.extentreports.Status;
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> 941cef31d563fddeec24c18082170405827c723d
 import stepdefinition.Hooks;
 import uistore.RequestAppointmentLocators;
 import utils.Base;
@@ -13,78 +17,130 @@ import utils.WebDriverHelper;
 public class RequestAppointmentActions
 {
     WebDriverHelper driverHelper = new WebDriverHelper(Base.driver);
+<<<<<<< HEAD
     
+=======
+   
+>>>>>>> 941cef31d563fddeec24c18082170405827c723d
     /**
      * Author: Kiruthik Vijey Raj P
      * This method hovers over and clicks on the "Get Started" button on the request appointment page.
      */
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> 941cef31d563fddeec24c18082170405827c723d
     public void clickOnGetStarted()
     {
         try{
         driverHelper.hover(RequestAppointmentLocators.RequestAppointment_Get_Started);
         driverHelper.clickTheElement(RequestAppointmentLocators.RequestAppointment_Get_Started);    
+<<<<<<< HEAD
         Hooks.test.log(Status.PASS, "Clicked on Get Started as Excepted");     
+=======
+        Hooks.test.log(Status.PASS, "Clicked on Get Started as Excepted");    
+>>>>>>> 941cef31d563fddeec24c18082170405827c723d
         }catch(Exception e)
         {
             Hooks.test.log(Status.FAIL, e.getMessage());
             ReportHelper.attachScreenshotToReport("Get Started", Hooks.test, "Get Started failed");
         }
     }
+<<<<<<< HEAD
     
+=======
+   
+>>>>>>> 941cef31d563fddeec24c18082170405827c723d
     /**
      * Author: Kiruthik Vijey Raj P
      * This method waits for the "Next" button to be clickable, then hovers over and clicks it.
      */
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> 941cef31d563fddeec24c18082170405827c723d
     public void clickOnNextButton()
     {
         try{
         driverHelper.waitForClickability(RequestAppointmentLocators.RequestAppointment_NextButton, 10);
         driverHelper.hoverAndClick(RequestAppointmentLocators.RequestAppointment_NextButton);
+<<<<<<< HEAD
         Hooks.test.log(Status.PASS, "Clicked on Next Button as Excepted"); 
+=======
+        Hooks.test.log(Status.PASS, "Clicked on Next Button as Excepted");
+>>>>>>> 941cef31d563fddeec24c18082170405827c723d
         }catch(Exception e)
         {
             Hooks.test.log(Status.FAIL, e.getMessage());
             ReportHelper.attachScreenshotToReport("Next Button", Hooks.test, "Next Button click failed");
         }
     }
+<<<<<<< HEAD
     
+=======
+   
+>>>>>>> 941cef31d563fddeec24c18082170405827c723d
     /**
      * Author: Kiruthik Vijey Raj P
      * This method waits for the "Me" option to be clickable, then hovers over and clicks it.
      */
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> 941cef31d563fddeec24c18082170405827c723d
     public void clickOnMe()
     {
         try{
         driverHelper.waitForClickability(RequestAppointmentLocators.RequestAppointment_Me, 10);
         driverHelper.hoverAndClick(RequestAppointmentLocators.RequestAppointment_Me);
+<<<<<<< HEAD
         Hooks.test.log(Status.PASS, "Clicked on Me button as Excepted"); 
+=======
+        Hooks.test.log(Status.PASS, "Clicked on Me button as Excepted");
+>>>>>>> 941cef31d563fddeec24c18082170405827c723d
         }catch(Exception e)
         {
             Hooks.test.log(Status.FAIL, e.getMessage());
             ReportHelper.attachScreenshotToReport("Me button", Hooks.test, "ME Button click failed");
         }
     }
+<<<<<<< HEAD
     
+=======
+   
+>>>>>>> 941cef31d563fddeec24c18082170405827c723d
     /**
      * Author: Kiruthik Vijey Raj P
      * This method clicks on the "Not Sure" option on the request appointment page.
      */
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> 941cef31d563fddeec24c18082170405827c723d
     public void clickOnNot_Sure()
     {
         try{
         driverHelper.clickTheElement(RequestAppointmentLocators.RequestAppointment_Not_Sure);
+<<<<<<< HEAD
         Hooks.test.log(Status.PASS, "Clicked on Not Sure as Excepted"); 
+=======
+        Hooks.test.log(Status.PASS, "Clicked on Not Sure as Excepted");
+>>>>>>> 941cef31d563fddeec24c18082170405827c723d
         }catch(Exception e)
         {
             Hooks.test.log(Status.FAIL, e.getMessage());
             ReportHelper.attachScreenshotToReport("Not Sure button", Hooks.test, "Not Sure  Button click failed");
         }
     }
+<<<<<<< HEAD
     
+=======
+   
+>>>>>>> 941cef31d563fddeec24c18082170405827c723d
     /**
      * Author: Kiruthik Vijey Raj P
      * This method fills in the personal details required for the appointment request.
@@ -95,11 +151,16 @@ public class RequestAppointmentActions
      * @param status The marital status of the person.
      * @param DOB The date of birth of the person.
      */
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> 941cef31d563fddeec24c18082170405827c723d
     public void fillTheDetails(String firstName,String lastName,String gender,String status,String DOB)
     {
         try{
         driverHelper.typeText(RequestAppointmentLocators.RequestAppointment_Firstname, firstName);
+<<<<<<< HEAD
         Hooks.test.log(Status.PASS, "Inputed first Name in the Input box as Expected"); 
         driverHelper.typeText(RequestAppointmentLocators.RequestAppointment_Lastname, lastName);
         Hooks.test.log(Status.PASS, "Inputed Last Name in the Input box as Expected"); 
@@ -109,13 +170,28 @@ public class RequestAppointmentActions
         Hooks.test.log(Status.PASS, "Selected the Marital Status in DropDown as Expected"); 
         driverHelper.typeText(RequestAppointmentLocators.RequestAppointment_DOB, DOB);
         Hooks.test.log(Status.PASS, "Selected the Date of Birth in DropDown as Expected"); 
+=======
+        Hooks.test.log(Status.PASS, "Inputed first Name in the Input box as Expected");
+        driverHelper.typeText(RequestAppointmentLocators.RequestAppointment_Lastname, lastName);
+        Hooks.test.log(Status.PASS, "Inputed Last Name in the Input box as Expected");
+        driverHelper.selectByValue(RequestAppointmentLocators.RequestAppointment_Gender, gender);
+        Hooks.test.log(Status.PASS, "Selected the Gender in DropDown as Expected");
+        driverHelper.selectByValue(RequestAppointmentLocators.RequestAppointment_MaritalStatus, status);
+        Hooks.test.log(Status.PASS, "Selected the Marital Status in DropDown as Expected");
+        driverHelper.typeText(RequestAppointmentLocators.RequestAppointment_DOB, DOB);
+        Hooks.test.log(Status.PASS, "Selected the Date of Birth in DropDown as Expected");
+>>>>>>> 941cef31d563fddeec24c18082170405827c723d
         }catch(Exception e)
         {
             Hooks.test.log(Status.FAIL, e.getMessage());
             ReportHelper.attachScreenshotToReport("Fill Details", Hooks.test, "Fill Details failed");
         }
     }
+<<<<<<< HEAD
     
+=======
+   
+>>>>>>> 941cef31d563fddeec24c18082170405827c723d
     /**
      * Author: Kiruthik Vijey Raj P
      * This method fills in the contact details required for the appointment request.
@@ -127,11 +203,16 @@ public class RequestAppointmentActions
      * @param email The email address of the person.
      * @param phone The phone number of the person.
      */
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> 941cef31d563fddeec24c18082170405827c723d
     public void fillcontacts(String address,String city,String state,String zipcode,String email,String phone)
     {
         try{
         driverHelper.clickUsingJS(RequestAppointmentLocators.RequestAppointment_Address);
+<<<<<<< HEAD
         Hooks.test.log(Status.PASS, "Clicked on Address Input Box as Excepted"); 
         driverHelper.typeText(RequestAppointmentLocators.RequestAppointment_Address, address);
         Hooks.test.log(Status.PASS, "Inputed Address in the Input box as Expected"); 
@@ -146,6 +227,22 @@ public class RequestAppointmentActions
         Hooks.test.log(Status.PASS, "Inputed zipcode in the Input box as Expected"); 
         driverHelper.typeText(RequestAppointmentLocators.RequestAppointment_Phone_number, phone);
         Hooks.test.log(Status.PASS, "Inputed Phone number in the Input box as Expected"); 
+=======
+        Hooks.test.log(Status.PASS, "Clicked on Address Input Box as Excepted");
+        driverHelper.typeText(RequestAppointmentLocators.RequestAppointment_Address, address);
+        Hooks.test.log(Status.PASS, "Inputed Address in the Input box as Expected");
+        driverHelper.typeText(RequestAppointmentLocators.RequestAppointment_City, city);
+        Hooks.test.log(Status.PASS, "Inputed City in the Input box as Expected");
+        driverHelper.waitForClickability(RequestAppointmentLocators.RequestAppointment_StateCategory, 10);
+        driverHelper.selectByVisibleText(RequestAppointmentLocators.RequestAppointment_StateCategory, state);
+        Hooks.test.log(Status.PASS, "Selected the State in DropDown as Expected");
+        driverHelper.typeText(RequestAppointmentLocators.RequestAppointment_Email, email);
+        Hooks.test.log(Status.PASS, "Inputed Email in the Input box as Expected");
+        driverHelper.typeText(RequestAppointmentLocators.RequestAppointment_Zipcode, zipcode);
+        Hooks.test.log(Status.PASS, "Inputed zipcode in the Input box as Expected");
+        driverHelper.typeText(RequestAppointmentLocators.RequestAppointment_Phone_number, phone);
+        Hooks.test.log(Status.PASS, "Inputed Phone number in the Input box as Expected");
+>>>>>>> 941cef31d563fddeec24c18082170405827c723d
         driverHelper.hoverAndClick(RequestAppointmentLocators.RequestAppointment_NextButton);
         Hooks.test.log(Status.PASS, "Clicked on Next Button as Excepted");
         }catch(Exception e)
@@ -154,19 +251,31 @@ public class RequestAppointmentActions
             ReportHelper.attachScreenshotToReport("Fill Contacts", Hooks.test, "Fill Contacts failed");
         }
     }
+<<<<<<< HEAD
     
+=======
+   
+>>>>>>> 941cef31d563fddeec24c18082170405827c723d
     /**
      * Author: Kiruthik Vijey Raj P
      * This method fills in the reason for the appointment and proceeds to the next step.
      *
      * @param reason The reason for the appointment.
      */
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> 941cef31d563fddeec24c18082170405827c723d
     public void appointmentneed(String reason)
     {
         try{
         driverHelper.typeText(RequestAppointmentLocators.RequestAppointment_Reason, reason);
+<<<<<<< HEAD
         Hooks.test.log(Status.PASS, "Inputed Reason for Appointment in the Input box as Expected"); 
+=======
+        Hooks.test.log(Status.PASS, "Inputed Reason for Appointment in the Input box as Expected");
+>>>>>>> 941cef31d563fddeec24c18082170405827c723d
         driverHelper.waitForClickability(RequestAppointmentLocators.RequestAppointment_NextButton,10);
         driverHelper.hoverAndClick(RequestAppointmentLocators.RequestAppointment_NextButton);
         Hooks.test.log(Status.PASS, "Clicked on Next Button as Excepted");
@@ -178,5 +287,9 @@ public class RequestAppointmentActions
             ReportHelper.attachScreenshotToReport("Fill Reason for appointment", Hooks.test, e.getMessage());
         }
     }
+<<<<<<< HEAD
 }
  
+=======
+}
+>>>>>>> 941cef31d563fddeec24c18082170405827c723d

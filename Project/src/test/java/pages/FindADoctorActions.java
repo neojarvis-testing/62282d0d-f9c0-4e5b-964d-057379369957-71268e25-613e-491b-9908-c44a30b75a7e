@@ -2,7 +2,11 @@ package pages;
  
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> 941cef31d563fddeec24c18082170405827c723d
 import stepdefinition.Hooks;
 import uistore.FindADoctorLocators;
 import utils.Base;
@@ -11,7 +15,11 @@ import utils.Screenshot;
 import utils.WebDriverHelper;
  
 public class FindADoctorActions
+<<<<<<< HEAD
 { 
+=======
+{
+>>>>>>> 941cef31d563fddeec24c18082170405827c723d
     WebDriverHelper driverHelper = new WebDriverHelper(Base.driver);
    
     /**
@@ -95,7 +103,11 @@ public class FindADoctorActions
             ReportHelper.attachScreenshotToReport("Find Doctor", Hooks.test, "Find Doctor failed");
         }
     }
+<<<<<<< HEAD
     
+=======
+   
+>>>>>>> 941cef31d563fddeec24c18082170405827c723d
     public void findADoctorAction()
     {
         searchBar();

@@ -1,5 +1,12 @@
 package utils;
  
+<<<<<<< HEAD
+=======
+import java.time.Duration;
+import java.util.Set;
+
+import org.junit.Assert;
+>>>>>>> 941cef31d563fddeec24c18082170405827c723d
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -10,6 +17,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+<<<<<<< HEAD
 import junit.framework.Assert;
 
 import java.time.Duration;
@@ -18,6 +26,15 @@ import java.util.Set;
 /**
  * Utility class to provide helper methods for WebDriver actions.
  * Author: Kiruthik Vijey Raj P
+=======
+import com.aventstack.extentreports.Status;
+
+import stepdefinition.Hooks;
+ 
+/**
+ * Utility class to provide helper methods for WebDriver actions.
+ * Author: Kiruthik Vijey Raj P`
+>>>>>>> 941cef31d563fddeec24c18082170405827c723d
  */
 public class WebDriverHelper {
     private WebDriver driver;
@@ -326,4 +343,72 @@ public class WebDriverHelper {
         element.click();
         LoggerHandler.info("Scrolled Till The Element And Clicked The Element");
     }
+<<<<<<< HEAD
+=======
+/**
+ * Author: Harshit Tomar
+ * This method asserts that the text of a web element matches the expected text.
+ *
+ * @param locator      The locator of the web element.
+ * @param expectedText The expected text to be present in the web element.
+ */
+public void assertText(By locator, String expectedText) {
+    try {
+        WebElement element = driver.findElement(locator);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.textToBePresentInElementLocated(locator, expectedText));
+        String actualText = element.getText();
+        Assert.assertTrue(actualText.contains(expectedText));
+        LoggerHandler.info(expectedText + " Asserted");
+        Hooks.test.log(Status.PASS, "Found " + expectedText + " as expected");
+    } catch (Exception e) {
+        e.printStackTrace();
+        LoggerHandler.error(e.getMessage());
+        Hooks.test.log(Status.PASS, "Found " + expectedText + " not as expected");
+    }
+}
+
+/**
+ * Author: Harshit Tomar
+ * This method asserts that the current URL contains the expected text.
+ *
+ * @param expectedText The expected text to be present in the URL.
+ */
+public void assertUrl(String expectedText) {
+    try {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(4));
+        wait.until(ExpectedConditions.urlContains(expectedText));
+        String actualUrl = driver.getCurrentUrl();
+        Assert.assertTrue(actualUrl.contains(expectedText));
+        LoggerHandler.info(expectedText + " Asserted");
+        Hooks.test.log(Status.PASS, "Verified URL: " + expectedText + " as expected");
+    } catch (Exception e) {
+        e.printStackTrace();
+        LoggerHandler.error(e.getMessage());
+        Hooks.test.log(Status.FAIL, "Verified URL: " + expectedText + " not as expected");
+    }
+}
+/**
+ * Author: Harshit Tomar
+ * This method asserts that the href attribute of a web element matches the expected text.
+ *
+ * @param locator      The locator of the web element.
+ * @param expectedText The expected href attribute value.
+ */
+public void assertHref(By locator, String expectedText) {
+    try {
+        WebElement element = driver.findElement(locator);
+        String actualHref = element.getAttribute("href");
+        Assert.assertEquals(actualHref, expectedText);
+        LoggerHandler.info(expectedText + " Asserted");
+        Hooks.test.log(Status.PASS, "Found " + expectedText + " as expected");
+    } catch (Exception e) {
+        e.printStackTrace();
+        LoggerHandler.error(e.getMessage());
+        Hooks.test.log(Status.PASS, "Found " + expectedText + " not as expected");
+    }
+}
+
+
+>>>>>>> 941cef31d563fddeec24c18082170405827c723d
 }
