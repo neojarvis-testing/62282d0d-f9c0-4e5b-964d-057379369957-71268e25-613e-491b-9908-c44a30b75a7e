@@ -2,13 +2,8 @@ package uistore;
 
 import org.openqa.selenium.By;
 
-<<<<<<< HEAD
-public class RequestAppointmentLocators 
-{
-=======
 public class RequestAppointmentLocators {
     
->>>>>>> 941cef31d563fddeec24c18082170405827c723d
     public static By RequestAppointment_Get_Started = By.cssSelector(".btn--primary");
     public static By RequestAppointment_Requestlabel = By.cssSelector(".web-appt__header");
     public static By RequestAppointment_Me = By.xpath("//button[@class='btn--icon btn--myself ']");

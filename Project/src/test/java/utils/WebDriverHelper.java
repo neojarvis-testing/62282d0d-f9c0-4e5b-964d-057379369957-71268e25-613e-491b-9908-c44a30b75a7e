@@ -1,12 +1,9 @@
 package utils;
  
-<<<<<<< HEAD
-=======
 import java.time.Duration;
 import java.util.Set;
 
 import org.junit.Assert;
->>>>>>> 941cef31d563fddeec24c18082170405827c723d
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -17,16 +14,6 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-<<<<<<< HEAD
-import junit.framework.Assert;
-
-import java.time.Duration;
-import java.util.Set;
- 
-/**
- * Utility class to provide helper methods for WebDriver actions.
- * Author: Kiruthik Vijey Raj P
-=======
 import com.aventstack.extentreports.Status;
 
 import stepdefinition.Hooks;
@@ -34,7 +21,6 @@ import stepdefinition.Hooks;
 /**
  * Utility class to provide helper methods for WebDriver actions.
  * Author: Kiruthik Vijey Raj P`
->>>>>>> 941cef31d563fddeec24c18082170405827c723d
  */
 public class WebDriverHelper {
     private WebDriver driver;
@@ -343,8 +329,6 @@ public class WebDriverHelper {
         element.click();
         LoggerHandler.info("Scrolled Till The Element And Clicked The Element");
     }
-<<<<<<< HEAD
-=======
 /**
  * Author: Harshit Tomar
  * This method asserts that the text of a web element matches the expected text.
@@ -410,5 +394,4 @@ public void assertHref(By locator, String expectedText) {
 }
 
 
->>>>>>> 941cef31d563fddeec24c18082170405827c723d
 }

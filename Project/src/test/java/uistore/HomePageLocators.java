@@ -2,12 +2,6 @@ package uistore;
 
 import org.openqa.selenium.By;
 
-<<<<<<< HEAD
-public class HomePageLocators 
-{
-    public static By Appointments_ScheduleNow = By.xpath("(//a[@class='story-panel__button button'])[3]");
-    public static By Appointments_Find_a_Doctor = By.xpath("(//a[@class='story-panel__button button'])[1]");
-=======
 public class HomePageLocators {
 
 
@@ -98,5 +92,4 @@ public class HomePageLocators {
 
     public static By getDirection=By.cssSelector("div a.story-panel__button[href='/locations']");
 
->>>>>>> 941cef31d563fddeec24c18082170405827c723d
 }

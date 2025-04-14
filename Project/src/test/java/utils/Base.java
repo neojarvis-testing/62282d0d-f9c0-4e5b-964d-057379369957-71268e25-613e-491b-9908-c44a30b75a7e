@@ -16,22 +16,17 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.events.EventFiringDecorator;
 import org.openqa.selenium.support.events.WebDriverListener;
 
-<<<<<<< HEAD
-=======
 /**
  * Base class to initialize WebDriver and load properties.
  * Author: Harshit Tomar
  */
 
->>>>>>> 941cef31d563fddeec24c18082170405827c723d
 public class Base {
 
     public static WebDriver driver;
     public static FileInputStream file;
     public static Properties prop;
 
-<<<<<<< HEAD
-=======
     /**
      * Author : Harshit Tomar
      * Loads properties from the specified properties file.
@@ -40,7 +35,6 @@ public class Base {
      *     
      */
 
->>>>>>> 941cef31d563fddeec24c18082170405827c723d
     public void loadProperties() throws IOException {
         String propertiesPath = System.getProperty("user.dir") + "/config/config.properties";
         try {
@@ -54,8 +48,6 @@ public class Base {
         }
     }
 
-<<<<<<< HEAD
-=======
     /**
      * Author : Harshit Tomar
      * Opens a browser based on the properties file configuration.
@@ -63,17 +55,11 @@ public class Base {
      *     
      */
 
->>>>>>> 941cef31d563fddeec24c18082170405827c723d
     public void openBrowser() {
 
         try {
             loadProperties();
         } catch (IOException e) {
-<<<<<<< HEAD
-            // TODO Auto-generated catch block
-=======
-
->>>>>>> 941cef31d563fddeec24c18082170405827c723d
             e.printStackTrace();
         }
         String executionType = prop.getProperty("executiontype");
@@ -116,13 +102,8 @@ public class Base {
         {
             driver.manage().window().maximize();
             driver.get(prop.getProperty("url"));
-<<<<<<< HEAD
-            driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(15));
-            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-=======
             driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(8));
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(8));
->>>>>>> 941cef31d563fddeec24c18082170405827c723d
 
         }
         // Dont remove the listener Object
