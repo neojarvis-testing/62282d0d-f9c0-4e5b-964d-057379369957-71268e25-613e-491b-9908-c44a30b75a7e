@@ -31,24 +31,4 @@ public class BloodManageActions {
             ReportHelper.attachScreenshotToReport("Contact", test, "Contact Not Clicked");
         }
     }
-     /**
-      * Author: Vignesh
-      *Gathers all the methods for TestCase 10
-      * @param test The ExtentTest object for logging the status of the actions
-      */
-    public void bloodActions(ExtentTest test) {
-        try {
-            HomePageActions homePageActions = new HomePageActions();
-            homePageActions.institute(test);
-            InstituteActions institute = new InstituteActions();
-            institute.bloodacction(test);
-            BloodManageActions bloodMangement = new BloodManageActions();
-            bloodMangement.bloodMethod(test);
-            institute.pharmacyAction(test);
-            PharmacyActions pharmacy = new PharmacyActions();
-            pharmacy.takeSurvey(test);
-        } catch (Exception e) {
-            test.log(Status.FAIL, e.getMessage());
-        }
-    }
 }
