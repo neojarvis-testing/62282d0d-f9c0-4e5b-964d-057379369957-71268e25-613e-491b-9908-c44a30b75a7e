@@ -9,7 +9,7 @@ import pages.BSOActions;
 import pages.HealthLibraryActions;
 import pages.HomePageActions;
 
-public class TestCase09 {
+public class HealthLibraryStep {
     ExtentTest test = Hooks.test;
     ExtentReports reports;
 

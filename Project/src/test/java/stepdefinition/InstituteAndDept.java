@@ -11,7 +11,7 @@ import pages.HomePageActions;
 import pages.InstituteActions;
 import pages.PharmacyActions;
 
-public class TestCase10 {
+public class InstituteAndDept {
     ExtentTest test = Hooks.test;
     ExtentReports reports;
     BloodManageActions bloodManageActions = new BloodManageActions();
