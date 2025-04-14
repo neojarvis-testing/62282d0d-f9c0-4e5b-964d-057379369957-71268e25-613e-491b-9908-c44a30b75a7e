@@ -4,19 +4,11 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-<<<<<<< HEAD
-  <groupId>ex1</groupId>
-  <artifactId>Milestone2</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-
-  <name>Milestone2</name>
-=======
   <groupId>Cleveland</groupId>
   <artifactId>clinic</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 
   <name>clinic</name>
->>>>>>> 941cef31d563fddeec24c18082170405827c723d
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
@@ -27,37 +19,12 @@
   </properties>
 
   <dependencies>
-<<<<<<< HEAD
-    <dependency>
-      <groupId>org.projectlombok</groupId>
-      <artifactId>lombok</artifactId>
-      <version>1.18.30</version> <!-- Replace with the latest version -->
-      <scope>provided</scope>
-  </dependency>
-    <dependency>
-=======
 <dependency>
->>>>>>> 941cef31d563fddeec24c18082170405827c723d
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-simple</artifactId>
       <version>2.0.7</version>
       <scope>test</scope>
     </dependency>
-<<<<<<< HEAD
-    <!-- https://mvnrepository.com/artifact/org.testng/testng -->
-    <dependency>
-    <groupId>io.cucumber</groupId>
-    <artifactId>cucumber-java</artifactId>
-    <version>7.22.0</version>
-  </dependency>
-  <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
-  <dependency>
-    <groupId>io.cucumber</groupId>
-    <artifactId>cucumber-junit</artifactId>
-    <version>7.22.0</version>
-    <scope>test</scope>
-    </dependency>
-=======
     <!-- https://mvnrepository.com/artifact/org.testng/testng
     <dependency>
       <groupId>org.testng</groupId>
@@ -72,16 +39,11 @@
     <version>1.18.30</version> <!-- Or the latest available version -->
     <scope>provided</scope>
 </dependency>
->>>>>>> 941cef31d563fddeec24c18082170405827c723d
     <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-java</artifactId>
-<<<<<<< HEAD
-      <version>4.15.0</version>
-=======
       <version>4.22.0</version>
->>>>>>> 941cef31d563fddeec24c18082170405827c723d
     </dependency>
     <dependency>
       <groupId>org.apache.poi</groupId>
@@ -102,10 +64,6 @@
     <groupId>log4j</groupId>
     <artifactId>log4j</artifactId>
     <version>1.2.17</version>
-<<<<<<< HEAD
-    
-  </dependency>
-=======
 </dependency>
 <dependency>
     <groupId>io.cucumber</groupId>
@@ -118,7 +76,6 @@
     <version>7.20.1</version>
     <scope>test</scope>
 </dependency>
->>>>>>> 941cef31d563fddeec24c18082170405827c723d
   </dependencies>
 
   <build>
