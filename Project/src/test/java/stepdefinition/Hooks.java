@@ -7,6 +7,7 @@ import io.cucumber.java.AfterAll;
 import io.cucumber.java.Before;
 import io.cucumber.java.BeforeAll;
 import io.cucumber.java.Scenario;
+import io.cucumber.plugin.event.Node.ScenarioOutline;
 import utils.Base;
 import utils.ReportHelper;
  
