@@ -6,14 +6,14 @@ import uistore.LocationPageLocators;
 import utils.Base;
 import utils.Screenshot;
 import utils.WebDriverHelper;
-
-
+ 
+ 
 public class HomePageAction {
     WebDriverHelper driverHelper = new WebDriverHelper(Base.driver);
 /**
          * Author: Md Saif Masoom
          * Executes actions on the homepage.
-         * This method navigates to the homepage of the application and performs specific actions. 
+         * This method navigates to the homepage of the application and performs specific actions.
          * It hovers over an element identified by a locator and clicks on it to proceed further.
          * It is wrapped in a try-catch block to handle any exceptions that may occur during execution.
          *
@@ -32,7 +32,7 @@ public class HomePageAction {
 /**
      * Author: Md Saif Masoom
      * Executes actions on the homepage.
-     * This method navigates to the homepage of the application and performs specific actions. 
+     * This method navigates to the homepage of the application and performs specific actions.
      * It clicks for proceed further.
      * It is wrapped in a try-catch block to handle any exceptions that may occur during execution.
      *
@@ -52,7 +52,7 @@ public class HomePageAction {
 /**
      * Author: Md Saif Masoom
      * Executes actions on the homepage.
-     * This method navigates to the homepage of the application and performs specific actions. 
+     * This method navigates to the homepage of the application and performs specific actions.
      * It clicks and wait for element to visible.
      * It is wrapped in a try-catch block to handle any exceptions that may occur during execution.
      *
@@ -76,7 +76,7 @@ public class HomePageAction {
 /**
      * Author: Md Saif Masoom
      * Executes actions on the homepage.
-     * This method navigates to the homepage of the application and performs specific actions. 
+     * This method navigates to the homepage of the application and performs specific actions.
      * It clicks and wait for element to visible.
      * It is wrapped in a try-catch block to handle any exceptions that may occur during execution.
      *
@@ -103,13 +103,13 @@ public class HomePageAction {
 /**
      * Author: Md Saif Masoom
      * Executes actions on the homepage.
-     * This method navigates to the homepage of the application and performs specific actions. 
+     * This method navigates to the homepage of the application and performs specific actions.
      * It clicks and wait for element to visible.
      * It is wrapped in a try-catch block to handle any exceptions that may occur during execution.
      *
      * @throws Exception If an error occurs during the hover or click actions.
      */
-
+ 
     public void serviceTypesInput() {
         try {
             driverHelper.clickTheElement(LocationPageLocators.serviceTypes);
@@ -131,7 +131,7 @@ public class HomePageAction {
 /**
      * Author: Md Saif Masoom
      * Executes actions on the homepage.
-     * This method navigates to the homepage of the application and performs specific actions. 
+     * This method navigates to the homepage of the application and performs specific actions.
      * It clicks on button.
      * It is wrapped in a try-catch block to handle any exceptions that may occur during execution.
      *
@@ -149,13 +149,13 @@ public class HomePageAction {
 /**
      * Author: Md Saif Masoom
      * Executes actions on the homepage.
-     * This method navigates to the homepage of the application and performs specific actions. 
+     * This method navigates to the homepage of the application and performs specific actions.
      * It switches window and wait for element to visible after that it take screenshot.
      * It is wrapped in a try-catch block to handle any exceptions that may occur during execution.
      *
      * @throws Exception If an error occurs during the hover or click actions.
      */
-
+ 
     public void secondWindow() {
         try {
             driverHelper.switchWindow();

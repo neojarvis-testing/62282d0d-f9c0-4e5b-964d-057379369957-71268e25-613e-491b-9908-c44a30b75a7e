@@ -7,6 +7,12 @@ import org.apache.log4j.FileAppender;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PatternLayout;
  
+/**
+ * Author: Vignesh
+ * LoggerHandler is a utility class for logging informational and error messages.
+ * It also provides methods to log messages along with attribute text retrieved
+ * from a web element in Selenium WebDriver.
+ */
 public class LoggerHandler {
  
     private static final Logger logger = Logger.getLogger(LoggerHandler.class);
