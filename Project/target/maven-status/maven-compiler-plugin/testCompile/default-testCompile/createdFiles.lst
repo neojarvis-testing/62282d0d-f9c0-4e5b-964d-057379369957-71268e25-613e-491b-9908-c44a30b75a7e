@@ -1,4 +1,5 @@
 utils/WebDriverHelper.class
+stepdefinition/Respiratory.class
 utils/Base.class
 utils/EventHandler.class
 runner/TestRun1.class
@@ -8,5 +9,6 @@ uistore/RespiratoryLocators.class
 utils/LoggerHandler.class
 uistore/HomePageLocators.class
 utils/ExcelReader.class
+stepdefinition/Hooks.class
 pages/RespiratoryAction.class
 pages/HomePageActions.class
