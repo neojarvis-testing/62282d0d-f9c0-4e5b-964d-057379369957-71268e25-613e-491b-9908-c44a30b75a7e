@@ -7,8 +7,8 @@
 /home/coder/project/workspace/Project/src/test/java/utils/Base.java
 /home/coder/project/workspace/Project/src/test/java/stepdefinition/Hooks.java
 /home/coder/project/workspace/Project/src/test/java/stepdefinition/ForProvidersDefinition.java
+/home/coder/project/workspace/Project/src/test/java/runner/TestRun.java
 /home/coder/project/workspace/Project/src/test/java/pages/ForProvidersAction.java
 /home/coder/project/workspace/Project/src/test/java/pages/HealthLibraryAction.java
 /home/coder/project/workspace/Project/src/test/java/utils/ReportHelper.java
 /home/coder/project/workspace/Project/src/test/java/utils/ExcelReader.java
-/home/coder/project/workspace/Project/src/test/java/runner/TestRunner.java
