@@ -16,7 +16,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.aventstack.extentreports.Status;
 
-import stepdefinitions.Hooks;
+import stepdefinition.Hooks;
  
 /**
  * Utility class to provide helper methods for WebDriver actions.
