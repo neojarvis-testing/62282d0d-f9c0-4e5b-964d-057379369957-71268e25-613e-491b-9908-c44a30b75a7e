@@ -3,7 +3,7 @@ Feature: Homepage Footer Links
   I want to click on Action footer links on the homepage
   So that I can visit the respective pages
 
-  Scenario: Test Case 08 - Footer Actions
+  Scenario: TestCase 08 - Footer Actions
     When I click on the Appointments Access link
     And I click on the Accepted Insurance link
     And I click on the Events Calendar link

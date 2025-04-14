@@ -3,7 +3,7 @@ Feature: Homepage Social Media Links
   I want to click on social media links on the homepage
   So that I can visit the respective social media pages
 
-  Scenario: Test Case 07 - Social Links
+  Scenario: TestCase 07 - Social Links
     When I click on the Facebook link
     And I click on the Twitter link
     And I click on the YouTube link

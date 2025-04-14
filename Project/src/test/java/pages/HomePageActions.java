@@ -3,7 +3,8 @@ import java.time.Duration;
 
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
- 
+
+import stepdefinition.Hooks;
 import uistore.HomePageLocators;
 import uistore.NeedHelpLocators;
 import utils.Base;
@@ -16,81 +17,117 @@ import utils.WebDriverHelper;
 public class HomePageActions {
     WebDriverHelper driverHelper = new WebDriverHelper(Base.driver);
  
-    /**
+   /**
      * Author: Kiruthik Vijey Raj P
      * This method clicks on the "Schedule Now" button on the home page.
      * It logs the action using the provided ExtentTest object.
      *
-     * @param test The ExtentTest object used for logging test information.
+     * @param test The ExtentTest object used for logging test PASSrmation.
      */
  
-    public  void clickOnSchedule(ExtentTest test)
-    {
-        driverHelper.clickTheElement(HomePageLocators.Appointments_ScheduleNow);
-        test.log(Status.INFO, "Clicked on schedule now");
-    }
+     public  void clickOnSchedule()
+     {
+         try{    
+             driverHelper.clickTheElement(HomePageLocators.Appointments_ScheduleNow);
+             Hooks.test.log(Status.PASS, "Clicked on schedule now as Excepted");
+         }catch(Exception e)
+         {
+         Hooks.test.log(Status.FAIL, e.getMessage());
+         ReportHelper.attachScreenshotToReport("Schedule Now Button", Hooks.test, "Schedule Now Button click failed");
+     }
+     }
  
    
     /**
-     * Author: Kiruthik Vijey Raj P
-     * This method clicks on the "Find a Doctor" button on the home page.
-     * It logs the action using the provided ExtentTest object.
-     *
-     * @param test The ExtentTest object used for logging test information.
-     */
+      * Author: Kiruthik Vijey Raj P
+      * This method clicks on the "Find a Doctor" button on the home page.
+      * It logs the action using the provided ExtentTest object.
+      *
+      * @param test The ExtentTest object used for logging test PASSrmation.
+      */
  
-    public  void clickOnFindADoctor(ExtentTest test)
-    {
-        driverHelper.clickTheElement(HomePageLocators.Appointments_Find_a_Doctor);
-        test.log(Status.INFO, "Clicked on Request an Appointment");
-    }
-   
-    /**
+      public  void clickOnFindADoctor()
+      {
+         try{
+             driverHelper.clickTheElement(HomePageLocators.Appointments_Find_a_Doctor);
+             Hooks.test.log(Status.PASS, "Clicked on Find a Doctor as Excepted");
+          }catch(Exception e)
+          {
+             Hooks.test.log(Status.FAIL, e.getMessage());
+             ReportHelper.attachScreenshotToReport("Appointments_Request", Hooks.test, "Appointments_Request failed");
+         }
+     }
+       /**
      * Author: Vignesh
-     * Clicks on the 'Health Library' section to navigate to the health library page.
+     * Clicks on the 'Health Library' section to navigate to the health library
+     * @param test The ExtentTest object for logging the status of the actions
      */
-    public void healthLibrary() {
-        driverHelper.clickTheElement(HomePageLocators.healthLibrary);
+    public void healthLibrary(ExtentTest test) {
+        try {
+            driverHelper.clickTheElement(HomePageLocators.healthLibrary);
+            test.log(Status.INFO,"Clicked on Health Library");
+        } catch (Exception e) {
+            test.log(Status.FAIL, e.getMessage());
+            ReportHelper.attachScreenshotToReport("Health Library", test, "Health Library Not Clicked");
+        }
     }
-    
+ 
     /**
      * Author: Vignesh
-     * Clicks on the 'Institute and Departments' section to navigate to the relevant page.
+     * Clicks on the 'Institute and Departments' section to navigate to the relevant
+     * @param test The ExtentTest object for logging the status of the actions
      */
-    public void institute() {
-        driverHelper.clickTheElement(HomePageLocators.institueAndDepat);
+    public void institute(ExtentTest test) {
+        try {
+            driverHelper.clickTheElement(HomePageLocators.institueAndDepat);
+            test.log(Status.INFO, "Clicked on Institute And Department");
+        } catch (Exception e) {
+            test.log(Status.FAIL, e.getMessage());
+            ReportHelper.attachScreenshotToReport("Institute And Department", test, "Institute And Department Not Clicked");
+        }
     }
-    
+ 
     /**
      * Author: Vignesh
-     Clicks on the 'need help' section to navigate to the relevant page.
-    */
-    public void clickNeedHelp() {
-        driverHelper.waitForClickability(NeedHelpLocators.needHelp, 3);
-        driverHelper.hover(NeedHelpLocators.needHelp);
-        driverHelper.clickTheElement(NeedHelpLocators.needHelp);
+     * Clicks on the 'need help' section to navigate to the relevant page.
+     * @param test The ExtentTest object for logging the status of the actions
+     */
+    public void clickNeedHelp(ExtentTest test) {
+        try {
+            driverHelper.waitForClickability(NeedHelpLocators.needHelp, 3);
+            driverHelper.hover(NeedHelpLocators.needHelp);
+            driverHelper.clickTheElement(NeedHelpLocators.needHelp);
+            test.log(Status.INFO, "Clicked on Needhelp");
+        } catch (Exception e) {
+            test.log(Status.FAIL, e.getMessage());
+            ReportHelper.attachScreenshotToReport("Needhelp", test, "Needhelp Not Clicked");
+        }
     }
    
    
     /**
      * Author: Vinny Claret.A
      * This method performs a search operation on the home page.
-     * It clicks on the search icon, enters the search term "Respiratory", and presses Enter.
-     * It then verifies the page title, waits for an element to be clickable, clicks it, and retrieves text from another element.
+     * It clicks on the search icon, enters the search term "Respiratory", and
+     * presses Enter.
+     * It then verifies the page title, waits for an element to be clickable, clicks
+     * it, and retrieves text from another element.
      *
      * @throws Exception If an error occurs during the search operation.
      */
-    public void searchOperation()
-    {
+    public void searchOperation(ExtentTest test, String string) {
         driverHelper.clickTheElement(HomePageLocators.search);
+         Hooks.test.log(Status.PASS, "Clicked on Searchbar as expected");
         driverHelper.clickTheElement(HomePageLocators.searchbar);
-        driverHelper.typeText(HomePageLocators.searchbar, "Respiratory");
-   
+        driverHelper.typeText(HomePageLocators.searchbar, string);
+        Hooks.test.log(Status.PASS, "Entered on Respiratory as expected");
+ 
         driverHelper.pressEnter(HomePageLocators.searchbar);
         String title = Base.driver.getTitle();
         driverHelper.verifyTitle(title);
-       
+ 
         driverHelper.waitForClickability(HomePageLocators.firstResp, 2);
+        Hooks.test.log(Status.PASS, "Clicked on first Respiratory as expected");
         driverHelper.clickTheElement(HomePageLocators.firstResp);
         driverHelper.retrieveText(HomePageLocators.verifyResp);
     }
@@ -102,10 +139,7 @@ public class HomePageActions {
      * @throws Exception If an error occurs during the search operation.
      */
  
-    public void searchAll()
-    {
-        searchOperation();
-    }
+
    
     /**
      * Author: Harshit Tomar
