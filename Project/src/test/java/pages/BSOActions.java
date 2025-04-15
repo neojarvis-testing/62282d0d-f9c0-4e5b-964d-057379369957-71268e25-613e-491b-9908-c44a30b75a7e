@@ -1,16 +1,16 @@
 package pages;
-
+ 
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-
+ 
 import uistore.BSOLocatorss;
 import utils.Base;
 import utils.ReportHelper;
 import utils.WebDriverHelper;
-
+ 
 public class BSOActions {
     WebDriverHelper driverHelper = new WebDriverHelper(Base.driver);
-
+ 
     /**
      * Author: Vignesh
      * element, selects the 'Red Eye' option, switches to a new window, and
@@ -29,7 +29,7 @@ public class BSOActions {
             ReportHelper.attachScreenshotToReport("Contact", test, "Red Eye Not Clicked");
         }
     }
-
+ 
     /**
      * Author: Vignesh
      *Gathers the methods of TestCase 10
@@ -53,3 +53,4 @@ public class BSOActions {
         }
     }
 }
+ 

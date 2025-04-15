@@ -1,18 +1,18 @@
 package pages;
-
+ 
 import org.openqa.selenium.JavascriptExecutor;
-
+ 
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-
+ 
 import uistore.EyeLocators;
 import utils.Base;
 import utils.ReportHelper;
 import utils.WebDriverHelper;
-
+ 
 public class EyeActions {
     WebDriverHelper driverHelper = new WebDriverHelper(Base.driver);
-
+ 
     /**
      * Author: Vignesh
      * Navigates to the 'Eye Diseases' section. This method performs a series of
@@ -43,3 +43,4 @@ public class EyeActions {
         }
     }
 }
+ 

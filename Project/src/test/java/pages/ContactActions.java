@@ -1,8 +1,8 @@
 package pages;
-
+ 
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-
+ 
 import uistore.ContactLocators;
 import uistore.InstituteLocators;
 import uistore.NeedHelpLocators;
@@ -12,7 +12,7 @@ import utils.LoggerHandler;
 import utils.ReportHelper;
 import utils.Screenshot;
 import utils.WebDriverHelper;
-
+ 
 /**
  * Author: Vignesh
  * The ContactActions class contains methods for navigating through
@@ -21,14 +21,14 @@ import utils.WebDriverHelper;
  */
 public class ContactActions {
     WebDriverHelper driverHelper = new WebDriverHelper(Base.driver);
-
+ 
     /**
      * Author: Vignesh
      * Navigates to and clicks on the contact button after ensuring its visibility
      * and readiness.
      * Handles hovering and clicking actions for smooth navigation to the contact
      * section.
-     * 
+     *
      * @param test The ExtentTest object for logging the status of the actions
      */
     public void clickContact(ExtentTest test) {
@@ -42,12 +42,12 @@ public class ContactActions {
             ReportHelper.attachScreenshotToReport("Parking", test, "Parking Not Clicked");
         }
     }
-
+ 
     /**
      * Author: Vignesh
      * Verifies the visibility of the contact options and performs actions to view
      * phone details and contact Cleveland Clinic's support section.
-     * 
+     *
      * @param test The ExtentTest object for logging the status of the actions
      */
     public void viewPhoneDirect(ExtentTest test) {
@@ -62,12 +62,12 @@ public class ContactActions {
             ReportHelper.attachScreenshotToReport("contact CleveLand Clinic", test, "contact CleveLand Clinic Not Clicked");
         }
     }
-
+ 
     /**
      * Author: Vignesh
      * Navigates to and clicks on the Cleveland home page contact link. Handles
      * element hovering and clicking interactions.
-     * 
+     *
      * @param test The ExtentTest object for logging the status of the actions
      */
     public void clickClevelanHome(ExtentTest test) {
@@ -81,13 +81,13 @@ public class ContactActions {
             ReportHelper.attachScreenshotToReport("homePage", test, "homePage Not Clicked");
         }
     }
-
+ 
     /**
      * Author: Vignesh
      * Verifies and clicks on the parking section element for additional
      * information.
      * Logs the action performed in the test report.
-     * 
+     *
      * @param test The ExtentTest object for logging the status of the actions.
      */
     public void verifyParking(ExtentTest test) {
@@ -101,12 +101,12 @@ public class ContactActions {
             ReportHelper.attachScreenshotToReport("Parking", test, "Parking Not Clicked");
         }
     }
-
+ 
     /**
      * Author: Vignesh
      * Performs a sequence of actions to navigate through and interact with the
      * virtual assistance section and related elements.
-     * 
+     *
      * @param test The ExtentTest object for logging the status of the actions.
      */
     public void tillVirtualSecond(ExtentTest test) {
@@ -122,13 +122,13 @@ public class ContactActions {
             ReportHelper.attachScreenshotToReport("virutual Second", test, "virutual Second Not Clicked");
         }
     }
-
+ 
     /**
      * Author: Vignesh
      * Captures a screenshot of the current page when clicking the "Get Started"
      * button
      * and attaches it to the test report.
-     * 
+     *
      * @param test The ExtentTest object for logging the status of the actions and
      *             attaching the screenshot.
      */

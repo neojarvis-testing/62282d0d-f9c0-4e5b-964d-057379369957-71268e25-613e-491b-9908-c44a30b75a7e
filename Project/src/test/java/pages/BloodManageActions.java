@@ -1,17 +1,17 @@
 package pages;
-
+ 
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-
+ 
 import uistore.BloodManageLocators;
 import utils.Base;
 import utils.ReportHelper;
 import utils.Screenshot;
 import utils.WebDriverHelper;
-
+ 
 public class BloodManageActions {
     WebDriverHelper driverHelper = new WebDriverHelper(Base.driver);
-
+ 
     /**
      * Author: Vignesh
      * Hovers over and clicks the 'Contact' button, captures a highlighted
@@ -32,3 +32,4 @@ public class BloodManageActions {
         }
     }
 }
+ 

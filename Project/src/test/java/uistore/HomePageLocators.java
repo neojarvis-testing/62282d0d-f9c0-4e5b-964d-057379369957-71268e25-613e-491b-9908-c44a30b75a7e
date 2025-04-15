@@ -10,7 +10,6 @@ public class HomePageLocators {
     public static By Appointments_ScheduleNow = By.xpath("(//a[@class='story-panel__button button'])[3]");
     public static By Appointments_Find_a_Doctor = By.xpath("(//a[@class='story-panel__button button'])[1]");
     ////Test Case 05 [Rewa]
-    
 
     
     public static By healthLibrary_diseaseAndCondition = By.cssSelector("[title='Diseases & Conditions']");
@@ -55,17 +54,6 @@ public class HomePageLocators {
     public static By forProviders_trainingAndEducation = By.cssSelector("[href='/departments/education']");
 
 
-
-
-
-
-
-
-
-
-
-    
-
     public static By search = By.xpath("//a[@class='button--small button--search']");
     public static By searchbar = By.cssSelector("#search-input");
     public static By result = By.cssSelector("#site-stats-main");
@@ -103,10 +91,5 @@ public class HomePageLocators {
     
 
     public static By getDirection=By.cssSelector("div a.story-panel__button[href='/locations']");
-
-
-
-
-
 
 }

@@ -1,16 +1,16 @@
 package pages;
-
+ 
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-
+ 
 import uistore.HealthLibraryLocators;
 import utils.Base;
 import utils.ReportHelper;
 import utils.WebDriverHelper;
-
+ 
 public class HealthLibraryActions {
     WebDriverHelper driverHelper = new WebDriverHelper(Base.driver);
-
+ 
     /**
      * Author: Vignesh
      * Clicks on the 'Body Systems and Organs' section to navigate further.
@@ -30,3 +30,4 @@ public class HealthLibraryActions {
         }
     }
 }
+ 

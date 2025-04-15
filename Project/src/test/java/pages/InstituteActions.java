@@ -1,14 +1,14 @@
 package pages;
-
+ 
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-
+ 
 import uistore.InstituteLocators;
 import utils.Base;
 import utils.LoggerHandler;
 import utils.ReportHelper;
 import utils.WebDriverHelper;
-
+ 
 /**
  * Author: Vignesh
  * The InstituteActions class provides methods for navigating and interacting
@@ -16,7 +16,7 @@ import utils.WebDriverHelper;
  */
 public class InstituteActions {
     WebDriverHelper driverHelper = new WebDriverHelper(Base.driver);
-
+ 
     /**
      * Author: Vignesh
      * Hovers over the selection element and clicks on 'Blood Management.'
@@ -32,7 +32,7 @@ public class InstituteActions {
             ReportHelper.attachScreenshotToReport("BloodMangement", test, "BloodMangement Not Clicked");
         }
     }
-
+ 
     /**
      * Author: Vignesh
      * Ensures clickability, scrolls, hovers, and clicks on 'Pharmacy,' with form
@@ -53,5 +53,7 @@ public class InstituteActions {
             ReportHelper.attachScreenshotToReport("Pharmacy", test, "Pharmacy Not Clicked");
         }
     }
-
+ 
 }
+ 
+ 
