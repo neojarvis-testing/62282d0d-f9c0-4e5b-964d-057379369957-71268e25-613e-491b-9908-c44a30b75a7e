@@ -27,11 +27,13 @@ public class HealthLibraryAction {
             Base.driver.navigate().back();
  
         } catch (Exception e) {
- 
+            // Hooks.test.log(Status.FAIL, e.getMessage());
+            // ReportHelper.attachScreenshotToReport("Disease and Condition", Hooks.test, "Disease and Condition functionality failed"); 
         }
     }
  
     /**
+     * Author: Rewa Pawar
      * Description: Navigates to the 'Diagnostics and Testing' section of the health
      * library,
      * waits for the page to load, verifies the title, and then navigates back.
@@ -45,11 +47,13 @@ public class HealthLibraryAction {
             Base.driver.navigate().back();
  
         } catch (Exception e) {
- 
+            // Hooks.test.log(Status.FAIL, e.getMessage());
+            // ReportHelper.attachScreenshotToReport("Diagnostics and Testing", Hooks.test, "Diagnostics and Testing functionality failed"); 
         }
     }
  
     /**
+     * Author: Rewa Pawar
      * Description: Navigates to the 'Treatments and Procedure' section of the
      * health library,
      * waits for the page to load, verifies the title, and then navigates back.
@@ -63,11 +67,13 @@ public class HealthLibraryAction {
             Base.driver.navigate().back();
  
         } catch (Exception e) {
- 
+            // Hooks.test.log(Status.FAIL, e.getMessage());
+            // ReportHelper.attachScreenshotToReport("Treatments and Procedure", Hooks.test, "Treatments and Procedure functionality failed"); 
         }
     }
  
     /**
+     * Author: Rewa Pawar
      * Description: Navigates to the 'Body Systems and Organs' section of the health
      * library,
      * waits for the page to load, verifies the title, and then navigates back.
@@ -81,11 +87,13 @@ public class HealthLibraryAction {
             Base.driver.navigate().back();
  
         } catch (Exception e) {
- 
+            // Hooks.test.log(Status.FAIL, e.getMessage());
+            // ReportHelper.attachScreenshotToReport("Body System and Organs functionality failed"); 
         }
     }
  
     /**
+     * Author: Rewa Pawar
      * Description: Navigates to the 'Drugs, Devices, and Supplements' section of
      * the health library,
      * waits for the page to load, and then navigates back.
@@ -98,7 +106,8 @@ public class HealthLibraryAction {
             Base.driver.navigate().back();
  
         } catch (Exception e) {
- 
+            // Hooks.test.log(Status.FAIL, e.getMessage());
+            // ReportHelper.attachScreenshotToReport("Drugs and Devices", Hooks.test, "Drugs and Devices functionality failed"); 
         }
     }
  

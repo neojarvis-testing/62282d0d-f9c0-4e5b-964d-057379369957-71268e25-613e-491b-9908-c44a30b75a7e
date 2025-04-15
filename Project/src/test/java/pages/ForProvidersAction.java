@@ -37,10 +37,14 @@ public class ForProvidersAction {
            
         } catch (Exception e) {
            
+            // Hooks.test.log(Status.FAIL, e.getMessage());
+            // ReportHelper.attachScreenshotToReport("Join Nursing Team", Hooks.test, "Join Nursing Team functionality failed"); 
+           
         }
     }
  
     /**
+     * Author: Rewa Pawar
      * Navigates to the 'Careers' section, performs necessary actions,
      * switches to a new window, and then closes the window.
      *
@@ -62,11 +66,13 @@ public class ForProvidersAction {
             Base.driver.switchTo().window(mainWindowHandle);
            
         } catch (Exception e) {
-            
+            // Hooks.test.log(Status.FAIL, e.getMessage());
+            // ReportHelper.attachScreenshotToReport("Careers", Hooks.test, "Career functionality failed"); 
         }
     }
  
     /**
+     * Author: Rewa Pawar
      * Navigates to the 'Refer a Patient' section, performs necessary actions,
      * switches to a new window, and then closes the window.
      *
@@ -87,11 +93,13 @@ public class ForProvidersAction {
            
            
         } catch (Exception e) {
-           
+            // Hooks.test.log(Status.FAIL, e.getMessage());
+            ReportHelper.attachScreenshotToReport("Refer Patient", Hooks.test, "Refer Patient Functionality failed");
         }
     }
  
     /**
+     * Author: Rewa Pawar
      * Navigates to the 'Consult QD' section, performs necessary actions,
      * switches to a new window, and then closes the window.
      *
@@ -112,11 +120,13 @@ public class ForProvidersAction {
            
            
         } catch (Exception e) {
-           
+            // Hooks.test.log(Status.FAIL, e.getMessage());
+            // ReportHelper.attachScreenshotToReport("Consult Qd", Hooks.test, "Consult Qd functionality failed");
         }
     }
  
     /**
+     * Author: Rewa Pawar
      * Navigates to the 'Education' section, performs necessary actions,
      * switches to a new window, and then closes the window.
      *
@@ -138,7 +148,8 @@ public class ForProvidersAction {
            
            
         } catch (Exception e) {
- 
+            // Hooks.test.log(Status.FAIL, e.getMessage());
+            // ReportHelper.attachScreenshotToReport("Education", Hooks.test, "Education functionality failed");
         }
     }
  
