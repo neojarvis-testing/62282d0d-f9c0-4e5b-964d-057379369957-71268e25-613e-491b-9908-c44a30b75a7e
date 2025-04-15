@@ -38,5 +38,4 @@ public class Hooks extends Base {
         reports.flush();
 
     }
-
 }
