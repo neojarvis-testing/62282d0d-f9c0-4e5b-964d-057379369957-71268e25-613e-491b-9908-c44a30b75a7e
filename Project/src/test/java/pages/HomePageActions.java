@@ -211,7 +211,7 @@ public class HomePageActions {
         String mainWindowHandle = Base.driver.getWindowHandle();
         driverHelper.clickTheElement(HomePageLocators.linkedinSocialLink);
         driverHelper.switchWindow();        
-       // driverHelper.assertUrl(ExcelReader.readCellValue("data1", "linkedIn", "value"));
+        // driverHelper.assertUrl(ExcelReader.readCellValue("data1", "linkedIn", "value"));
         Base.driver.close();
         Base.driver.switchTo().window(mainWindowHandle);
     }
