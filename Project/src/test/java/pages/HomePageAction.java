@@ -162,6 +162,7 @@ public class HomePageAction {
             Hooks.test.log(Status.PASS, "Window switched as expected");
             Base.driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
             driverHelper.waitForVisibility(LocationPageLocators.signinsecond, 5);
+            driverHelper.verifyUrl(Base.prop.getProperty("mapurl"));
             Screenshot.screenShotAndHighlight(Base.driver, LocationPageLocators.signinsecond, "Google Maps page");
             Hooks.test.log(Status.PASS, "Screenshot captured successfully");
         } catch (Exception e) {
