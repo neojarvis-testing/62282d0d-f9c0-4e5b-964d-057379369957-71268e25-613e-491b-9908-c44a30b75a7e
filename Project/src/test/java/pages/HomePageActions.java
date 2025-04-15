@@ -65,6 +65,7 @@ public class HomePageActions {
     public void healthLibrary(ExtentTest test) {
         try {
             driverHelper.clickTheElement(HomePageLocators.healthLibrary);
+            driverHelper.verifyTitle(ExcelReader.readCellValue("Sheet1","HealthLibrary","value"));
             test.log(Status.INFO,"Clicked on Health Library");
         } catch (Exception e) {
             test.log(Status.FAIL, e.getMessage());
@@ -81,6 +82,7 @@ public class HomePageActions {
         try {
             driverHelper.clickTheElement(HomePageLocators.institueAndDepat);
             test.log(Status.INFO, "Clicked on Institute And Department");
+            //driverHelper.verifyTitle(ExcelReader.readCellValue("Sheet1","Institute and Departments","value"));
         } catch (Exception e) {
             test.log(Status.FAIL, e.getMessage());
             ReportHelper.attachScreenshotToReport("Institute And Department", test, "Institute And Department Not Clicked");
