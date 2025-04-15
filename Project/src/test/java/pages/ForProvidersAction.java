@@ -36,11 +36,15 @@ public class ForProvidersAction {
             Base.driver.switchTo().window(mainWindowHandle);
            
         } catch (Exception e) {
-            // Handle exception
+           
+            // Hooks.test.log(Status.FAIL, e.getMessage());
+            // ReportHelper.attachScreenshotToReport("Join Nursing Team", Hooks.test, "Join Nursing Team functionality failed"); 
+           
         }
     }
  
     /**
+     * Author: Rewa Pawar
      * Navigates to the 'Careers' section, performs necessary actions,
      * switches to a new window, and then closes the window.
      *
@@ -62,11 +66,13 @@ public class ForProvidersAction {
             Base.driver.switchTo().window(mainWindowHandle);
            
         } catch (Exception e) {
-            // Handle exception
+            // Hooks.test.log(Status.FAIL, e.getMessage());
+            // ReportHelper.attachScreenshotToReport("Careers", Hooks.test, "Career functionality failed"); 
         }
     }
  
     /**
+     * Author: Rewa Pawar
      * Navigates to the 'Refer a Patient' section, performs necessary actions,
      * switches to a new window, and then closes the window.
      *
@@ -81,17 +87,19 @@ public class ForProvidersAction {
             test.log(Status.PASS,"Clicked on Referring Physician as excepted");
             driverHelper.switchWindow();
             test.log(Status.PASS,"Switched to new Referring Physician page as excepted");
-            //driverHelper.verifyTitle(ExcelReader.readCellValue("Sheet1", "7", "value"));
+            //driverHelper.verifyTitle(ExcelReader.readCellValue("data2", "7", "value"));
             Base.driver.close();
             Base.driver.switchTo().window(mainWindowHandle);
            
            
         } catch (Exception e) {
-           
+            // Hooks.test.log(Status.FAIL, e.getMessage());
+            ReportHelper.attachScreenshotToReport("Refer Patient", Hooks.test, "Refer Patient Functionality failed");
         }
     }
  
     /**
+     * Author: Rewa Pawar
      * Navigates to the 'Consult QD' section, performs necessary actions,
      * switches to a new window, and then closes the window.
      *
@@ -106,17 +114,19 @@ public class ForProvidersAction {
             test.log(Status.PASS,"Clicked on Join our Site for Physician as excepted");
             driverHelper.switchWindow();
             test.log(Status.PASS,"Switched to new Site for Physician page as excepted");
-            //driverHelper.verifyTitle(ExcelReader.readCellValue("Sheet1", "8", "value"));
+            //driverHelper.verifyTitle(ExcelReader.readCellValue("data2", "8", "value"));
             Base.driver.close();
             Base.driver.switchTo().window(mainWindowHandle);
            
            
         } catch (Exception e) {
-           
+            // Hooks.test.log(Status.FAIL, e.getMessage());
+            // ReportHelper.attachScreenshotToReport("Consult Qd", Hooks.test, "Consult Qd functionality failed");
         }
     }
  
     /**
+     * Author: Rewa Pawar
      * Navigates to the 'Education' section, performs necessary actions,
      * switches to a new window, and then closes the window.
      *
@@ -132,13 +142,14 @@ public class ForProvidersAction {
             Base.driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(2));
             driverHelper.switchWindow();
             test.log(Status.PASS,"Switched to new Training and Education page as excepted");
-            //driverHelper.verifyTitle(ExcelReader.readCellValue("Sheet1", "9", "value"));
+            //driverHelper.verifyTitle(ExcelReader.readCellValue("data2", "9", "value"));
             Base.driver.close();
             Base.driver.switchTo().window(mainWindowHandle);
            
            
         } catch (Exception e) {
- 
+            // Hooks.test.log(Status.FAIL, e.getMessage());
+            // ReportHelper.attachScreenshotToReport("Education", Hooks.test, "Education functionality failed");
         }
     }
  

@@ -9,9 +9,8 @@ public class HomePageLocators {
     //kiruthik 
     public static By Appointments_ScheduleNow = By.xpath("(//a[@class='story-panel__button button'])[3]");
     public static By Appointments_Find_a_Doctor = By.xpath("(//a[@class='story-panel__button button'])[1]");
-    ////Test Case 05 [Rewa]
 
-    
+    ////Test Case 05 [Rewa]
     public static By healthLibrary_diseaseAndCondition = By.cssSelector("[title='Diseases & Conditions']");
     public static By healthLibrary_diseaseAndConditionNew = By.cssSelector("h1[class='page-header__title lede']");
 
@@ -52,6 +51,8 @@ public class HomePageLocators {
     public static By forProviders_education= By.id(("education"));
     
     public static By forProviders_trainingAndEducation = By.cssSelector("[href='/departments/education']");
+
+    
 
 
     public static By search = By.xpath("//a[@class='button--small button--search']");
