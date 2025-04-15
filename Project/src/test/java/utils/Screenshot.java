@@ -1,10 +1,8 @@
 package utils;
-
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
@@ -52,6 +50,9 @@ public class Screenshot {
     }
 
     /**
+     * 
+     * Author: Rewa Pawar
+     * 
      * This method captures a screenshot of the entire webpage and saves it
      * with a timestamped filename.
      *      

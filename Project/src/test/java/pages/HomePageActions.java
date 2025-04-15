@@ -65,6 +65,7 @@ public class HomePageActions {
     public void healthLibrary(ExtentTest test) {
         try {
             driverHelper.clickTheElement(HomePageLocators.healthLibrary);
+            driverHelper.verifyTitle(ExcelReader.readCellValue("Sheet1","HealthLibrary","value"));
             test.log(Status.INFO,"Clicked on Health Library");
         } catch (Exception e) {
             test.log(Status.FAIL, e.getMessage());
@@ -81,6 +82,7 @@ public class HomePageActions {
         try {
             driverHelper.clickTheElement(HomePageLocators.institueAndDepat);
             test.log(Status.INFO, "Clicked on Institute And Department");
+            //driverHelper.verifyTitle(ExcelReader.readCellValue("Sheet1","Institute and Departments","value"));
         } catch (Exception e) {
             test.log(Status.FAIL, e.getMessage());
             ReportHelper.attachScreenshotToReport("Institute And Department", test, "Institute And Department Not Clicked");
@@ -163,7 +165,7 @@ public class HomePageActions {
         String mainWindowHandle = Base.driver.getWindowHandle();
 	        driverHelper.clickTheElement(HomePageLocators.twitterSocialLink);
 	        driverHelper.switchWindow();      
-	       // //driverHelper.assertUrl(ExcelReader.readCellValue("data1", "twitter", "value"));
+	       // driverHelper.assertUrl(ExcelReader.readCellValue("data1", "twitter", "value"));
 	        Base.driver.close();
 	        Base.driver.switchTo().window(mainWindowHandle);
     }
@@ -177,7 +179,7 @@ public class HomePageActions {
     public void clickYoutube(){
         String mainWindowHandle = Base.driver.getWindowHandle();
         driverHelper.clickTheElement(HomePageLocators.youtubeSocialLink);
-      //  driverHelper.assertHref(HomePageLocators.youtubeSocialLink,ExcelReader.readCellValue("data1", "youtube", "value"));
+        //driverHelper.assertHref(HomePageLocators.youtubeSocialLink,ExcelReader.readCellValue("data1", "youtube", "value"));
         driverHelper.switchWindow();      
         Base.driver.close();
         Base.driver.switchTo().window(mainWindowHandle);
@@ -193,7 +195,7 @@ public class HomePageActions {
         String mainWindowHandle = Base.driver.getWindowHandle();
         driverHelper.clickTheElement(HomePageLocators.instagramSocialLink);
         driverHelper.switchWindow();      
-      //  //driverHelper.assertUrl(ExcelReader.readCellValue("data1", "instagram", "value"));
+        //driverHelper.assertUrl(ExcelReader.readCellValue("data1", "instagram", "value"));
         Base.driver.close();
         Base.driver.switchTo().window(mainWindowHandle);
     }
@@ -208,7 +210,7 @@ public class HomePageActions {
         String mainWindowHandle = Base.driver.getWindowHandle();
         driverHelper.clickTheElement(HomePageLocators.linkedinSocialLink);
         driverHelper.switchWindow();        
-       // //driverHelper.assertUrl(ExcelReader.readCellValue("data1", "linkedIn", "value"));
+        // driverHelper.assertUrl(ExcelReader.readCellValue("data1", "linkedIn", "value"));
         Base.driver.close();
         Base.driver.switchTo().window(mainWindowHandle);
     }
@@ -223,7 +225,7 @@ public class HomePageActions {
         String mainWindowHandle = Base.driver.getWindowHandle();
         driverHelper.clickTheElement(HomePageLocators.pinterestSocialLink);
         driverHelper.switchWindow();      
-      //  //driverHelper.assertUrl(ExcelReader.readCellValue("data1", "pinterest", "value"));
+        //driverHelper.assertUrl(ExcelReader.readCellValue("data1", "pinterest", "value"));
         Base.driver.close();
         Base.driver.switchTo().window(mainWindowHandle);
     }
@@ -238,7 +240,7 @@ public class HomePageActions {
         String mainWindowHandle = Base.driver.getWindowHandle();
         driverHelper.clickTheElement(HomePageLocators.snapchatSocialLink);
         driverHelper.switchWindow();    
-      //  //driverHelper.assertUrl(ExcelReader.readCellValue("data1", "snapchat", "value"));
+       // driverHelper.assertUrl(ExcelReader.readCellValue("data1", "snapchat", "value"));
         Base.driver.close();
         Base.driver.switchTo().window(mainWindowHandle);
     }
@@ -252,7 +254,7 @@ public class HomePageActions {
     public void clickAppointmentsAccess(){
         driverHelper.scrollToElement(HomePageLocators.appointmentsActions);
         driverHelper.clickTheElement(HomePageLocators.appointmentsActions);
-        //driverHelper.assertUrl(ExcelReader.readCellValue("data1", "appointments", "value"));
+       // driverHelper.assertUrl(ExcelReader.readCellValue("data1", "appointments", "value"));
         Base.driver.navigate().back();
     }
    
@@ -265,7 +267,7 @@ public class HomePageActions {
     public void clickAcceptedInsurance(){
         driverHelper.scrollToElement(HomePageLocators.acceptedInsuranceActions);
         driverHelper.clickTheElement(HomePageLocators.acceptedInsuranceActions);
-        //driverHelper.assertUrl(ExcelReader.readCellValue("data1", "insurance", "value"));
+       // driverHelper.assertUrl(ExcelReader.readCellValue("data1", "insurance", "value"));
         Base.driver.navigate().back();
     }
    
@@ -294,7 +296,7 @@ public class HomePageActions {
     public void clickFinancialAssistance(){
         driverHelper.scrollToElement(HomePageLocators.financialAssistanceActions);
         driverHelper.clickTheElement(HomePageLocators.financialAssistanceActions);
-        //driverHelper.assertUrl(ExcelReader.readCellValue("data1", "financial", "value"));
+       // driverHelper.assertUrl(ExcelReader.readCellValue("data1", "financial", "value"));
         Base.driver.navigate().back();
     }
    
@@ -320,7 +322,7 @@ public class HomePageActions {
     public void clickPayBill(){
         driverHelper.scrollToElement(HomePageLocators.payBillActions);
         driverHelper.clickTheElement(HomePageLocators.payBillActions);
-        //driverHelper.assertUrl(ExcelReader.readCellValue("data1", "payBill", "value"));
+       // driverHelper.assertUrl(ExcelReader.readCellValue("data1", "payBill", "value"));
         Base.driver.navigate().back();
     }
    
@@ -333,7 +335,7 @@ public class HomePageActions {
     public void clickPriceTransparency(){
         driverHelper.scrollToElement(HomePageLocators.priceTransparencyActions);
         driverHelper.clickTheElement(HomePageLocators.priceTransparencyActions);
-        //driverHelper.assertUrl(ExcelReader.readCellValue("data1", "transparency", "value"));
+       // driverHelper.assertUrl(ExcelReader.readCellValue("data1", "transparency", "value"));
         Base.driver.navigate().back();
     }
 
@@ -345,7 +347,7 @@ public class HomePageActions {
     public void clickReferPatient(){
         driverHelper.scrollToElement(HomePageLocators.referPatientActions);
         driverHelper.clickTheElement(HomePageLocators.referPatientActions);
-        //driverHelper.assertUrl(ExcelReader.readCellValue("data1", "patient", "value"));
+      //  driverHelper.assertUrl(ExcelReader.readCellValue("data1", "patient", "value"));
         Base.driver.navigate().back();
     }
 
@@ -357,7 +359,7 @@ public class HomePageActions {
     public void clickPhoneDirectory(){
         driverHelper.scrollToElement(HomePageLocators.phoneDirectoryActions);
         driverHelper.clickTheElement(HomePageLocators.phoneDirectoryActions);
-        //driverHelper.assertUrl(ExcelReader.readCellValue("data1", "directory", "value"));
+       // driverHelper.assertUrl(ExcelReader.readCellValue("data1", "directory", "value"));
         Base.driver.navigate().back();
     }
 

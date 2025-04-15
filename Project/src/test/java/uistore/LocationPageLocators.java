@@ -19,5 +19,4 @@ public class LocationPageLocators {
     public static By expresscare = By.xpath("//li[contains(text(),'Express Care')]");
     public static By signinsecond = By.cssSelector("[class='gb_Ua gb_zd gb_qd gb_hd']");
     public static By getDirection=By.cssSelector("div a.story-panel__button[href='/locations']");
- 
-}
+ }
