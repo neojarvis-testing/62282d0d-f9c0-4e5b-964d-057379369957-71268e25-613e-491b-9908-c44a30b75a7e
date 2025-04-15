@@ -10,7 +10,7 @@ import pages.HealthLibraryActions;
 import pages.HomePageActions;
  
 public class HealthLibraryStep {
-    ExtentTest test = Hooks.test;
+    ExtentTest test=Hooks.test;
     ExtentReports reports;
  
     HomePageActions homePageActions = new HomePageActions();

@@ -50,6 +50,9 @@ public class Screenshot {
     }
 
     /**
+     * 
+     * Author: Rewa Pawar
+     * 
      * This method captures a screenshot of the entire webpage and saves it
      * with a timestamped filename.
      *      

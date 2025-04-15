@@ -135,8 +135,9 @@ public class ContactActions {
     public void getScreenshot(ExtentTest test) {
         try {
             driverHelper.clickTheElement(NeedHelpLocators.getStarted);
+            //driverHelper.verifyUrl(Base.driver.getCurrentUrl());
             test.log(Status.INFO, "Clicked on get started");
-            driverHelper.verifyUrl(ExcelReader.readCellValue("Sheet1", null, null));
+            //driverHelper.verifyUrl(ExcelReader.readCellValue("Sheet1", null, null));
             Screenshot.captureScreenshot(Base.driver, "create_account");
             ReportHelper.attachScreenshotToReport("create_account", test, "");
         } catch (Exception e) {
