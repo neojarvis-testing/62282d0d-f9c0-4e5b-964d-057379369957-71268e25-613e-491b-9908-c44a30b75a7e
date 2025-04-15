@@ -21,7 +21,7 @@ Examples:
     | Rajesh     | Kumar     | Male | Single | 09/07/1997    | 22 Merry Street | COIMBATORE | OH | 43210    | mjd000@gmail.com | 614.466.2000  | Fever  |
  
 @doctor
-Scenario: TestCase 05 - Find a Doctor
+Scenario: TestCase 04 - Find a Doctor
     When the user clicks on the Find a Doctor under Our Doctors Section
     When the user searches for "Heart"
     And the user applies location, department, and language filters "English"
