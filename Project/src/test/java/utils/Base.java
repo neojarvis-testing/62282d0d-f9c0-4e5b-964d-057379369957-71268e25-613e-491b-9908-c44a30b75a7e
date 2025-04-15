@@ -15,7 +15,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.events.EventFiringDecorator;
 import org.openqa.selenium.support.events.WebDriverListener;
-
 /**
  * Base class to initialize WebDriver and load properties.
  * Author: Harshit Tomar
@@ -64,7 +63,6 @@ public class Base {
         }
         String executionType = prop.getProperty("executiontype");
         String browserName = prop.getProperty("browser");
-
         if ("remote".equalsIgnoreCase(executionType)) {
             URL gridUrl;
             try {

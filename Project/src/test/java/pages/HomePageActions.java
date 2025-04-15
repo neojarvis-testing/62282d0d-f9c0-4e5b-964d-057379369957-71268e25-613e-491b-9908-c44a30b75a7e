@@ -118,6 +118,7 @@ public class HomePageActions {
      * @throws Exception If an error occurs during the search operation.
      */
     public void searchOperation(ExtentTest test, String string) {
+       try{
         driverHelper.clickTheElement(HomePageLocators.search);
          Hooks.test.log(Status.PASS, "Clicked on Searchbar as expected");
         driverHelper.clickTheElement(HomePageLocators.searchbar);
@@ -133,16 +134,12 @@ public class HomePageActions {
         driverHelper.clickTheElement(HomePageLocators.firstResp);
         driverHelper.retrieveText(HomePageLocators.verifyResp);
     }
-   
-    /**
-     * Author: Vinny Claret. A
-     * This method performs a search operation by calling the searchOperation method.
-     *
-     * @throws Exception If an error occurs during the search operation.
-     */
+    catch (Exception e) {
+        test.log(Status.FAIL, e.getMessage());
+        ReportHelper.attachScreenshotToReport("Search Operation", test, "Respiratory Not Clicked");
+    }
+}
  
-
-   
     /**
      * Author: Harshit Tomar
      * This method clicks on the Facebook social link on the home page.
